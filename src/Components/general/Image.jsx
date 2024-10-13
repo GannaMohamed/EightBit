@@ -1,6 +1,6 @@
-import { noImage } from "./assets";
+import { noImage } from "../../Utils/assets";
 
-export const Image = ({ className, src, style }) => {
+export default function Image({ className, src, style }) {
   const handleError = (e) => {
     e.target.onerror = null; // Prevent infinite loop in case of subsequent errors
     e.target.src = noImage; // Replace with default image when error occurs
@@ -15,4 +15,4 @@ export const Image = ({ className, src, style }) => {
       onError={handleError} // Handle error loading image
     />
   );
-};
+}

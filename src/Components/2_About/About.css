@@ -1,0 +1,19 @@
+.AboutPage {
+     
+}
+.AboutTitle {
+    
+    color: var(--oxfordBlue);
+font-weight: var(--bold);
+font-size: 5rem;
+letter-spacing: 10px;}
+
+.AboutContent { 
+    color: var(--oxfordBlue);
+
+font-weight: var(--medium);
+font-size: 1.5rem;
+
+letter-spacing: 2.56px;
+line-height:187.5%;
+}

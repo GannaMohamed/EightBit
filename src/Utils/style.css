@@ -1,0 +1,105 @@
+:root {
+    --oxfordBlue: #062453;
+    --lavenderBlue: #E0E5F3;
+    --brightBlue: #768FC8;
+    --linear1: linear-gradient(180deg, #0140A0 0%, #00173A 100%);
+    --linear2: linear-gradient(180deg, #0140A0 0%, #00173A 100%);
+    --linear3: linear-gradient(180deg, #052453 20%, #FFFFFF 150%);
+    --linear4: linear-gradient(180deg, var(--brightBlue) 0%, #052453 100%);
+
+    --font-family: 'Anek Bangla';
+    
+    --thin: 100;
+    --extralight: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+}
+
+.gradient1 {
+  background: var(--linear1);
+}
+
+.gradient2 {
+  background: var(--linear2);
+}
+
+.gradient3 {
+  background: var(--linear3);
+}
+
+.gradient4 {
+  background: var(--linear4);
+}
+
+.gradient1text {
+  background: var(--linear1);
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient2text {
+  background: var(--linear2);
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient3text {
+  background: var(--linear3);
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient4text {
+  background: var(--linear4);
+  background-clip: text;
+  color: transparent;
+}
+
+
+.thin {
+    font-weight: var(--thin);
+}
+
+.extralight {
+    font-weight: var(--extralight);
+}
+
+.light {
+    font-weight: var(--light);
+}
+
+.regular {
+    font-weight: var(--regular);
+}
+
+.medium {
+    font-weight: var(--medium);
+}
+
+.semibold {
+    font-weight: var(--semibold);
+}
+
+.bold {
+    font-weight: var(--bold);
+}
+
+.extrabold {
+    font-weight: var(--extrabold);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+        display: flex;
+
+    flex-direction: column;
+}

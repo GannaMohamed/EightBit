@@ -1,0 +1,23 @@
+.NavLogo {
+    width: 120px;
+}
+
+.NavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.NavItem {
+    font-size: 20px;
+    color: var(--brightBlue);
+}
+
+.ActiveNavItem {
+    color: var(--oxfordBlue);
+}
+
+.HoverNavItem {
+    /* ??? */
+}

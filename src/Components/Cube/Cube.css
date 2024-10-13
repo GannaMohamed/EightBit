@@ -1,0 +1,109 @@
+/* .Cube {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    transition: filter .5s;
+} */
+
+.Cube > * {
+    position: absolute;
+    width: calc(50%); 
+    height: calc(50%);
+    aspect-ratio: 1;
+    transition: opacity 0.5s ease, top 0.5s ease, left 0.5s ease, right 0.5s ease, bottom 0.5s ease; 
+}
+
+.Cube > *:not(.cube4).move {
+    opacity: 0.8;
+}
+
+.Cube.move {
+    filter: none;
+}
+
+/* 1 (Top-Left) */
+.cube1 {
+    /* top: 16.67%;
+    left: 0; */
+    top: 12%;
+    left: 4%;
+}
+
+.cube1.move {
+    top: 9%;
+    left: -1%;
+}
+
+/* 2 (Top-Center) */
+.cube2 {
+    top: 0;
+    left: 25%;
+}
+
+.cube2.move {
+    top: -5%;
+}
+
+/* 3 (Top-Right) */
+.cube3 {
+    top: 12%;
+    left: 46%;
+}
+
+.cube3.move {
+    top: 9%;
+    left: 50%;
+}
+
+/* 4 (Middle-Left) */
+.cube4 {
+    top: 24%;
+    left: 25%;
+}
+
+.cube4.move {
+    top: 25%;
+}
+
+/* 5 (Center) */
+.cube5 {
+    top: 37%;
+    left: 4%;
+}
+
+.cube5.move {
+    top:42%;
+    left: -1%;
+}
+
+/* 6 (Middle-Right) */
+.cube6 {
+    top: 16.67%;
+    left: 16.67%;
+    opacity: 0;
+}
+
+/* 7 (Bottom-Left) */
+.cube7 {
+    /* top: 33.33%;
+    right: 4%; */
+    top: 36%;
+    right: 4%;
+}
+
+.cube7.move {
+    top: 41%;
+    right: -1%;
+}
+
+/* 8 (Bottom-Center) */
+.cube8 {
+    top: 49%;
+    left: 25%;
+}
+
+.cube8.move {
+    top: 56%;
+}
+
