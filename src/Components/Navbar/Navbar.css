@@ -3,19 +3,24 @@
 }
 
 .NavContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
 }
 
-.NavItem {
+.NavItem > * {
     font-size: 20px;
-    color: var(--brightBlue);
+    margin-left: 3vw;
+    transition: text-decoration 0.5s ease ;
+    color: var(--brightBlue) !important;
 }
 
-.ActiveNavItem {
-    color: var(--oxfordBlue);
+.ActiveNavItem > * {
+    color: var(--oxfordBlue) !important;
 }
 
 .HoverNavItem {

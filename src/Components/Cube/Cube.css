@@ -1,17 +1,14 @@
-/* .Cube {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    aspect-ratio: 1;
-    transition: filter .5s;
-} */
+.Cube {
+    filter:drop-shadow( 0px 0px 150px  #0140A0);
+
+}
 
 .Cube > * {
     position: absolute;
     width: calc(50%); 
     height: calc(50%);
     aspect-ratio: 1;
-    transition: opacity 0.5s ease, top 0.5s ease, left 0.5s ease, right 0.5s ease, bottom 0.5s ease; 
+    transition: opacity 1s ease-in-out, top 0.5s ease, left 0.5s ease, right 0.5s ease, bottom 0.5s ease; 
 }
 
 .Cube > *:not(.cube4).move {
@@ -30,7 +27,7 @@
     left: 4%;
 }
 
-.cube1.move {
+.cube1.move, .hoverOneElement1:hover {
     top: 9%;
     left: -1%;
 }
@@ -41,7 +38,7 @@
     left: 25%;
 }
 
-.cube2.move {
+.cube2.move,  .hoverOneElement2:hover {
     top: -5%;
 }
 
@@ -51,7 +48,7 @@
     left: 46%;
 }
 
-.cube3.move {
+.cube3.move,  .hoverOneElement3:hover {
     top: 9%;
     left: 50%;
 }
@@ -62,8 +59,12 @@
     left: 25%;
 }
 
-.cube4.move {
+.cube4.move{
     top: 25%;
+}
+
+.hoverOneElement4:hover {
+    top: 21%;
 }
 
 /* 5 (Center) */
@@ -72,7 +73,7 @@
     left: 4%;
 }
 
-.cube5.move {
+.cube5.move,  .hoverOneElement5:hover {
     top:42%;
     left: -1%;
 }
@@ -92,7 +93,7 @@
     right: 4%;
 }
 
-.cube7.move {
+.cube7.move,  .hoverOneElement7:hover {
     top: 41%;
     right: -1%;
 }
@@ -103,7 +104,7 @@
     left: 25%;
 }
 
-.cube8.move {
+.cube8.move,  .hoverOneElement8:hover {
     top: 56%;
 }
 

@@ -5,9 +5,68 @@
 .App {
     position: relative;
 }
+
+.Background {
+    background: var(--lavenderBlue, #E0E5F3);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.GradientContainer {
+  width: inherit;
+  height: inherit;
+  position: relative;  
+}
+
+.ellipse {
+  --ellipseW: 1000px;
+  position: absolute;
+  background-color: var(--brightBlue);
+  border-radius: 500px;
+  filter: blur(1000px);
+  width: var(--ellipseW);
+  height:  var(--ellipseW);
+}
+
+.ellipse1 {
+  top: -500px;
+  right: -500px;
+}
+
+.ellipse2 {
+  bottom: -500px;
+  left: -500px;
+}
+
 .ControlledFlow {
     position: absolute;
     top: 0;
     width: 100%;
     z-index: -1;
 }
+
+/* Style the scrollbar */
+::-webkit-scrollbar
+{
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color:var(--oxfordBlue);
+}
+
+
+/* Style the track */
+::-webkit-scrollbar-track {
+  background-color: var(--lavenderBlue);
+  
+}
+
+
+
+
+

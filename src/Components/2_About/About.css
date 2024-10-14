@@ -1,19 +1,44 @@
 .AboutPage {
-     
+    margin: 9vw;
 }
-.AboutTitle {
-    
+.AboutContainer {
+    position: relative;
+}
+
+.AboutBoxesContainer>* {
+    margin-top: 2.3vw;
+    background: var(--linear-1, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
+}
+
+.CubeAbout {
+    position: absolute !important;
+    top: 0%;
+    right: 5%;
+}
+
+.WhoVector {
+    position: absolute;
+    top: 0;
+    right: 24vw;
+}
+
+.AboutTitle { 
     color: var(--oxfordBlue);
-font-weight: var(--bold);
-font-size: 5rem;
-letter-spacing: 10px;}
+    font-weight: var(--bold);
+    font-size: 5vw;
+    letter-spacing: 0.579vw;
+
+}
 
 .AboutContent { 
     color: var(--oxfordBlue);
-
-font-weight: var(--medium);
-font-size: 1.5rem;
-
-letter-spacing: 2.56px;
-line-height:187.5%;
+    font-weight: var(--medium);
+    font-size: 1.4vw;
+    letter-spacing: 0.145vw;
+    line-height:187.5%;
 }
+
+.AboutBoxesContainer {
+    display: flex;
+}
+

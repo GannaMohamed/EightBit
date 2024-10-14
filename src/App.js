@@ -1,24 +1,60 @@
 import "./App.css";
 import "./Utils/style.css";
-
+import styled from "styled-components";
+import { useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import ControlledFlow from "./Components/general/ControlledFlow";
 import Home from "./Components/1_Home/Home";
 import About from "./Components/2_About/About";
+import About2 from "./Components/2_About/About2";
 import Portfolio from "./Components/3_Portfolio/Portfolio";
 import Services from "./Components/4_Services/Services";
 import Contact from "./Components/5_Contact/Contact";
+import Cube from "./Components/Cube/Cube";
 
 function App() {
+  const [cubeStyle, setCubeStyle] = useState({});
+
+  const handleCubeTransform = (sectionIndex) => {
+    switch (sectionIndex) {
+      case 0:
+        setCubeStyle({ transform: "scale(1) translateY(0)" }); // Initial state
+        break;
+      case 1:
+        setCubeStyle({ transform: "scale(0.8) translateY(50vh)" }); // Transformation in section 2
+        break;
+      case 2:
+        setCubeStyle({ transform: "scale(0.6) translateY(100vh)" }); // Transformation in section 3
+        break;
+      // Add more cases for further sections as needed
+      default:
+        setCubeStyle({ transform: "scale(1)" });
+        break;
+    }
+  };
+
   return (
     <div className="App">
+      <div className="Background">
+        <div className="GradientContainer">
+          <div className="ellipse ellipse1"></div>
+          <div className="ellipse ellipse2 "></div>
+        </div>
+      </div>
+
       <Navbar></Navbar>
-      <ControlledFlow className="ControlledFlow">
-        <Home className="Page"></Home>
-        <About className="Page"></About>
-        <Portfolio className="Page"></Portfolio>
-        <Services className="Page"></Services>
-        <Contact className="Page"></Contact>
+      {/* <Cube style={cubeStyle} /> */}
+
+      <ControlledFlow
+        className="ControlledFlow"
+        onCubeTransform={handleCubeTransform}
+      >
+        <Home id="home"></Home>
+        <About id="about"></About>
+        <About2></About2>
+        <Portfolio id="portfolio"></Portfolio>
+        <Services id="services"></Services>
+        <Contact id="contact"></Contact>
       </ControlledFlow>
     </div>
   );

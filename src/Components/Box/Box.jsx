@@ -50,7 +50,7 @@ export default function Box({ dashvector, position, children }) {
         className={`vectorContainer position-relative ${
           position === "left" ? "left" : "right"
         }`}
-      > 
+      >
         <img alt="Vector" src={dashvector} />
         {position === "left" ? (
           <>
