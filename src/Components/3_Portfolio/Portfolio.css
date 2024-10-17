@@ -1,0 +1,41 @@
+.PortfolioContainer {
+    margin: 0 3vw;
+}
+
+.WebVector {
+    width: 37.426vw;
+}
+
+.PortfolioCubeContainer {
+    position: relative;
+    top: 4vw;
+    right: 1vw;
+}
+
+.SeeMore {
+    color: var(--Lavender-Blue, #E0E5F3);
+    font-family: "Anek Bangla";
+    font-size: 1.7vw;
+    line-height: 2.3vw;
+    border: unset;
+    padding: 0.231vw 0.926vw;
+    border-radius: 0.579vw;
+    background: var(--linear-2, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
+}
+
+.webTemplate {
+    width: 40vw;
+    position: relative;
+    bottom: 7vw;
+}
+
+.TempContainer > * {
+    width: inherit;
+    height: inherit;
+}
+
+.example {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
