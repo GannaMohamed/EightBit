@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MobTemplate from "./MobTemplate";
+import WebTemplate, { Laptop } from "./WebTemplate";
 import { webexample, mobexample } from "../../Utils/assets";
 
 const ContentTitle = styled.h3`
@@ -36,10 +37,10 @@ export default function PortfolioContent({ type }) {
         </ContentP>
         <button className="SeeMore semibold">See More</button>
       </Content>
-      <div>
-        {/* <WebTemplate img={webexample} className="webTemplate" /> */}
-        <MobTemplate img={mobexample} />
-      </div>
+      <div className="d-flex">
+        <WebTemplate img={webexample} className="webTemplate" />
+        {/* <MobTemplate img={mobexample} /> */}
+      </div>{" "}
     </div>
   );
 }

@@ -10,7 +10,7 @@ const Container = styled.div`
   bottom: 8vw;
 `;
 
-const Template = styled.img``;
+// const Template = styled.img``;
 
 const Example = styled.img`
   padding: 1.5vw;
@@ -21,7 +21,7 @@ export default function MobTemplate({ className, img }) {
   return (
     <Container className="TempContainer">
       <Example src={img} className="example" alt="Mobile App" />
-      <Template src={Mobile} />
+      <img src={Mobile} alt="Mobile Portfolio" />
     </Container>
   );
 }

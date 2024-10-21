@@ -28,6 +28,12 @@
     position: relative;
     bottom: 7vw;
 }
+.WebExampleImg {
+    position: absolute;
+    transform: rotate(-15deg);
+    width: 32.816vw;
+    left: 0;
+}
 
 .TempContainer > * {
     width: inherit;
@@ -38,4 +44,8 @@
     position: absolute;
     right: 0;
     z-index: -1;
+}
+
+.Keyboard > *, .Screen > * {
+    position:absolute;
 }
