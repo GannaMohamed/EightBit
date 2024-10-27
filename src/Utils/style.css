@@ -7,8 +7,12 @@
     --linear3: linear-gradient(180deg, #052453 20%, #FFFFFF 150%);
     --linear4: linear-gradient(180deg, var(--brightBlue) 0%, #052453 100%);
 
+    --linear-gradient: linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%);
+    --text-gradient: linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%);
+    --selected-color: #00173A;
+
     --font-family: 'Anek Bangla';
-    
+
     --thin: 100;
     --extralight: 200;
     --light: 300;
@@ -17,6 +21,11 @@
     --semibold: 600;
     --bold: 700;
     --extrabold: 800;
+
+    --inputHeight: 2.5rem;
+
+    --mediaWhiteFilter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(388%) hue-rotate(193deg) brightness(100%) contrast(91%);
+    --mediaHoverFilter: brightness(0) saturate(100%) invert(54%) sepia(61%) saturate(282%) hue-rotate(183deg) brightness(93%) contrast(93%);
 }
 
 .gradient1 {
@@ -99,7 +108,26 @@
 }
 
 .col {
-        display: flex;
-
+    display: flex;
     flex-direction: column;
 }
+
+/* Basic Components */
+.Button {
+  --linear-gradient: linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%);
+  --text-gradient: linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%);
+  padding: 0rem 1.8rem;
+  height: var(--inputHeight);
+  font-size: clamp(1.1rem, 1.3rem ,1.5rem);
+  font-weight: var(--medium);
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--linear-1, #0140A0);
+  background: var(--linear-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+

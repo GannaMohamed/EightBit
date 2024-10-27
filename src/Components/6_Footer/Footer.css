@@ -1,0 +1,49 @@
+.FooterContainer {
+    height: inherit;
+    width: inherit;
+    gap: 1rem;
+}
+
+.BlueFooter {
+    --footerTextColor: var(--Lavender-Blue, #E0E5F3);
+    width: 100%;
+    gap: 4vh;
+    /* position: absolute; */
+    /* bottom: 0; */
+    border-radius: 50px 50px 0px 0px;
+    background: var(--linear-1, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
+}
+
+/* Font Requirements */
+.BlueFooter > * {
+    color: var(--footerTextColor);
+    font-size: clamp(1rem, 1.2rem, 1.3rem);    
+    line-height: clamp(1.2rem, 1.2rem, 1.5rem);
+    letter-spacing: clamp(0.1rem, 0.2rem, 0.3rem);
+}
+
+.Grid > * {
+    width: 100%;
+}
+
+.LogoWhite {
+    height: 9vh;
+}
+
+
+.FooterHeading { 
+    font-weight: var(--bold);
+    line-height: clamp(3.2rem, 3.3rem, 3.6rem);
+}
+
+.FooterContent {
+    font-weight: var(--regular); 
+}
+
+.WhiteHR {
+    background: var(--footerTextColor);
+}
+
+.CopyRights {
+    font-weight: var(--medium);
+}

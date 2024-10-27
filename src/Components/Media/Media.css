@@ -1,0 +1,37 @@
+.SocialMediaContainer {
+    min-width: 30%;    
+}
+
+.SocialMediaIcon {
+    width: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.SocialMediaIcon:hover {
+    filter: var(--mediaHoverFilter);
+}
+
+@media only screen and (max-width: 768px) {
+    .SocialMediaContainer {
+        min-width: 100%;    
+    }
+    .SocialMediaIcon {
+        width: 2rem;
+        transition: all 0.4s ease;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .SocialMediaContainer {
+        /* min-width: 100%;     */
+    }
+    .SocialMediaIcon {
+        width: 2rem;
+        transition: all 0.4s ease;
+    }
+}
+
+
+.WhiteMedia {
+    filter: var(--mediaWhiteFilter);
+}

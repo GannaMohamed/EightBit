@@ -11,6 +11,7 @@ import Portfolio from "./Components/3_Portfolio/Portfolio";
 import Services from "./Components/4_Services/Services";
 import Contact from "./Components/5_Contact/Contact";
 import Cube from "./Components/Cube/Cube";
+import Footer from "./Components/6_Footer/Footer";
 
 function App() {
   const [cubeStyle, setCubeStyle] = useState({});
@@ -55,6 +56,7 @@ function App() {
         <Portfolio id="portfolio"></Portfolio>
         <Services id="services"></Services>
         <Contact id="contact"></Contact>
+        <Footer />
       </ControlledFlow>
     </div>
   );

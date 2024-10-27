@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./SplitScreen.css";
 
 export default function SplitScreen({
   children,
@@ -14,7 +15,7 @@ export default function SplitScreen({
     flex: ${(p) => p.flex};
   `;
   return (
-    <Container>
+    <Container className="SplitScreen">
       {/* problem flex=  [object object] */}
       <Panel flex={firstWidth}>{first}</Panel>
       <Panel flex={secondWidth}>{second}</Panel>

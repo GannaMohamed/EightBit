@@ -1,0 +1,49 @@
+.ContactHeading {
+    font-size: 6rem;
+    font-weight: var(--medium);
+    letter-spacing: 1.481vw;
+    background: linear-gradient(180deg, #052453 20.5%, #FFF 188%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.FormHeading {
+    font-size: clamp( 2.3rem,2.5rem, 2.6rem);
+    text-align: center;
+    font-weight: var(--medium);
+    letter-spacing: 0.33rem;
+    height: 4rem;
+    background: var(--linear1, linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root, .css-zsp0bh-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 0.5rem !important;
+    border: 0.09rem solid var(--linear-1, #0140A0);
+    padding: unset !important;
+    height: var(--inputHeight);
+}
+
+.css-zsp0bh-MuiInputBase-root-MuiOutlinedInput-root {    
+    height: var(--inputHeight)*2;
+}
+
+.FormContainer label {
+    font-size: clamp(1.0rem, 1.1rem ,1.5rem);
+    letter-spacing: 0.165rem;
+    font-weight: var(--semibold);
+    background: var(--linear1, linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Submitted {
+    background: var(--selected-color);
+    color: white;
+    border-color: var(--selected-color)
+}
+
