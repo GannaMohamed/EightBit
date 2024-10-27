@@ -8,14 +8,12 @@ import { footerContent } from "../../data";
 
 export default function Footer() {
   return (
-    <div className="FooterContainer d-flex align-items-end">
-      <div className="col align-items-center">
-        <Cube
-          hoverOneElement={true}
-          Width="14vw"
-          className={`CubePortfolio mb-4`}
-        />
-        <div className="BlueFooter col justify-content-around align-items-center">
+    <div className="FooterContainer col d-flex align-items-center justify-content-between">
+      <div className="centered flex-grow-1 pt-5">
+        <Cube hoverOneElement={true} Width="14vw" className={`CubePortfolio`} />
+      </div>
+      <div className="w-100">
+        <div className="BlueFooter col justify-content-around align-items-center py-2">
           {/* <Grid item spacing={4}> */}
           <div>
             <Grid item xs={12} className="centered">

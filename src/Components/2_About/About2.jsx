@@ -53,7 +53,7 @@ const BoxContent = styled.div`
 
 export default function About2() {
   return (
-    <div className="centered col">
+    <div className="About2Page centered col">
       <Title>Why Choose Us</Title>
       <div className="AboutBoxesContainer">
         <Box>

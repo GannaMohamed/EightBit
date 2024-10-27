@@ -42,10 +42,8 @@ function App() {
           <div className="ellipse ellipse2 "></div>
         </div>
       </div>
-
-      <Navbar></Navbar>
+      <Navbar />
       {/* <Cube style={cubeStyle} /> */}
-
       <ControlledFlow
         className="ControlledFlow"
         onCubeTransform={handleCubeTransform}
@@ -56,7 +54,6 @@ function App() {
         <Portfolio id="portfolio"></Portfolio>
         <Services id="services"></Services>
         <Contact id="contact"></Contact>
-        <Footer />
       </ControlledFlow>
     </div>
   );

@@ -1,5 +1,5 @@
 .NavLogo {
-    width: 120px;
+    width: 5vw;
 }
 
 .NavContainer {
@@ -8,13 +8,17 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+    /* align-items: center; */
+    padding: 0 5vw;
+}
+
+.NavItem {
+    /* gap: 3vw; */
 }
 
 .NavItem > * {
     font-size: 20px;
-    margin-left: 3vw;
+    /* margin-left: 3vw; */
     transition: text-decoration 0.5s ease ;
     color: var(--brightBlue) !important;
 }

@@ -1,13 +1,18 @@
 .FooterContainer {
-    height: inherit;
-    width: inherit;
+    /* width: inherit; */
+    width: 100vw;
+    height: 100vh;
+    /* position: fixed;
+    bottom: 0; */
     gap: 1rem;
+    overflow: hidden; /* fixing some stupid horizontal scroll */
 }
 
 .BlueFooter {
     --footerTextColor: var(--Lavender-Blue, #E0E5F3);
-    width: 100%;
+    /* width: 100%; */
     gap: 4vh;
+    height: 50vh;
     /* position: absolute; */
     /* bottom: 0; */
     border-radius: 50px 50px 0px 0px;

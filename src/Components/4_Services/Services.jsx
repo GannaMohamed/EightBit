@@ -15,7 +15,7 @@ const Heading = styled.h1`
 
 export default function Services() {
   return (
-    <div>
+    <div className="d-flex col centered">
       <Heading>Services</Heading>
       <List
         items={servicesdata}

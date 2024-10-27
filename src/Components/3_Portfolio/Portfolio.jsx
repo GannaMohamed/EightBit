@@ -22,8 +22,8 @@ const Title = styled.h2`
 
 export default function Portfolio({ className }) {
   return (
-    <div className={`col centered ${className} PortfolioContainer`}>
-      <div className={`col justify-content-between`}>
+    <div className={`PortfolioPage col ${className}`}>
+      <div className={`col`}>
         {/* Title Section */}
         <div className="d-flex align-items-start/">
           <Title className="medium">Portfolio</Title>

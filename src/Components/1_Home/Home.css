@@ -39,7 +39,7 @@ flex-shrink: 0; /* Prevents the item from shrinking */
 }
 
 .CubeHome {
-  top: -25%;
+  top: -5%;
 }
 
 .HomeContainer {
@@ -53,13 +53,13 @@ flex-shrink: 0; /* Prevents the item from shrinking */
 
 .HomeTitle {
   position: relative;
-  top: 10%;
+  /* top: 10%; */
 }
 
 .CubeHome {
   position: absolute; /* Absolute positioning within the parent container */
-  top: calc(20px);
-  transform: translateY(-50%); /* Center the cube vertically relative to its own height */
+  /* top: calc(20px); */
+  transform: translateY(-50%);
 }
 
 

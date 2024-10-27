@@ -1,7 +1,8 @@
 import React from "react";
 import { ReactLenis } from "@studio-freight/react-lenis"; // Make sure these are installed
 import "./ControlledFlow.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
+import Footer from "../6_Footer/Footer";
 
 export default function ControlledFlow({ children, className }) {
   const sectionsRef = useRef([]);
@@ -19,7 +20,7 @@ export default function ControlledFlow({ children, className }) {
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.9,
         rootMargin: "0px 0px 0px 0px",
       }
     );
@@ -44,6 +45,7 @@ export default function ControlledFlow({ children, className }) {
           </div>
         ))}
       </ReactLenis>
+      <Footer />
     </div>
   );
 }

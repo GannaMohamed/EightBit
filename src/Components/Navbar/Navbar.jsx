@@ -4,7 +4,7 @@ import Image from "../general/Image";
 import List from "../general/List";
 import NavItem from "./NavItem";
 
-import { Logomark } from "../../Utils/assets";
+import LogoFull from "../../Assets/LogoFull.svg";
 import { navdata } from "../../data";
 
 import "./Navbar.css";
@@ -13,11 +13,11 @@ export default function Navbar() {
   return (
     <div className="NavContainer">
       {/* <SplitScreen firstWidth={1} secondWidth={1}> */}
-      <Image className="NavLogo" src={Logomark} alt="Logo" />
+      <Image className="NavLogo" src={LogoFull} alt="Logo" />
       <List
         items={navdata}
         srcName={"navItem"}
-        className="d-flex w-50 justify-content-between"
+        className="d-flex w-50 justify-content-between align-items-center"
         ItemComponent={(props) => <NavItem {...props} className="NavItem" />}
       ></List>
       {/* </SplitScreen> */}

@@ -1,11 +1,11 @@
 .ServicesInfo {
   height: 90vh;
-  margin-top: 3.819vw;
+  /* margin-top: 3.819vw; */
 }
 
 .ServicesInfo .Head {
   font-weight: var(--semibold);
-  font-size: 3.704vw;
+  font-size: 3vw;
   letter-spacing: 0.37vw;
   background: var(
     --linear1,
@@ -17,7 +17,7 @@
 }
 
 .ServicesInfo .Body {
-  font-size: 2.315vw;
+  font-size: 1.9vw;
   letter-spacing: 0.231vw;
   font-weight: var(--medium);
     background: var(

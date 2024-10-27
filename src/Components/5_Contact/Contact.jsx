@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SplitScreen from "../general/SplitScreen";
 import Select from "./Select";
 import { TextField, Box } from "@mui/material";
@@ -8,14 +8,14 @@ import "./Contact.css";
 import Media from "../Media/Media";
 
 export default function Contact() {
-  const [selectedOptions, setSelectedOptions] = useState([]);
-  const handleOptionClick = (value) => {
-    if (selectedOptions.includes(value)) {
-      setSelectedOptions(selectedOptions.filter((option) => option !== value));
-    } else {
-      setSelectedOptions([...selectedOptions, value]);
-    }
-  };
+  // const [selectedOptions, setSelectedOptions] = useState([]);
+  // const handleOptionClick = (value) => {
+  //   if (selectedOptions.includes(value)) {
+  //     setSelectedOptions(selectedOptions.filter((option) => option !== value));
+  //   } else {
+  //     setSelectedOptions([...selectedOptions, value]);
+  //   }
+  // };
 
   const onSubmit = (formData) => {
     const form = new FormData();
@@ -26,15 +26,17 @@ export default function Contact() {
   };
 
   return (
-    <SplitScreen>
-      <h1 className="ContactHeading">Contact</h1>
-      <div className="FormContainer">
-        <form>
-          <h2 className="FormHeading">Get In Touch</h2>
-          <Form onSubmit={onSubmit} />
-        </form>
-      </div>
-    </SplitScreen>
+    <div className="centered ">
+      <SplitScreen>
+        <h1 className="ContactHeading">Contact</h1>
+        <div className="FormContainer">
+          <form>
+            <h2 className="FormHeading">Get In Touch</h2>
+            <Form onSubmit={onSubmit} />
+          </form>
+        </div>
+      </SplitScreen>{" "}
+    </div>
   );
 }
 

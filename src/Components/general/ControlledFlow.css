@@ -1,13 +1,21 @@
 .Page {
-    height: 100vh;
-     opacity: 1;
+  height: 100vh;
+  /* margin-top: 90px; */
+  opacity: 1;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  border: 1px red solid;
+  border: 1px red solid;  
+  margin: 0 5.5vw;
+
+}
+
+.Page > * {
+  /* margin-top: 90px; */
+  height: inherit;
 }
 
 
 .Page.fade-up {
   opacity: 0;
-  transform: translateY(-50px);
+  /* transform: translateY(-50px); */
 }

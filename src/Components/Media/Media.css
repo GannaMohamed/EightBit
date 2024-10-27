@@ -3,7 +3,7 @@
 }
 
 .SocialMediaIcon {
-    width: 1.5rem;
+    width: 1.5vw;
     transition: all 0.4s ease;
 }
 
@@ -11,7 +11,7 @@
     filter: var(--mediaHoverFilter);
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .SocialMediaContainer {
         min-width: 100%;    
     }
@@ -23,13 +23,13 @@
 
 @media only screen and (max-width: 900px) {
     .SocialMediaContainer {
-        /* min-width: 100%;     */
+        min-width: 100%;    
     }
     .SocialMediaIcon {
         width: 2rem;
         transition: all 0.4s ease;
     }
-}
+} */
 
 
 .WhiteMedia {

@@ -39,8 +39,8 @@ export default function PortfolioContent({ type }) {
       </Content>
       <div className="d-flex">
         <WebTemplate img={webexample} className="webTemplate" />
-        {/* <MobTemplate img={mobexample} /> */}
-      </div>{" "}
+        <MobTemplate img={mobexample} />
+      </div>
     </div>
   );
 }
