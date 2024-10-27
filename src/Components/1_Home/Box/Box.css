@@ -5,6 +5,7 @@
   color: #ffffff;
   position: relative;
   top: 25vh;
+  font-size: 1.1vw;
 }
 
 
@@ -18,8 +19,8 @@
 
 .box .rectangle {
     aspect-ratio: 2;
-    padding: 30px 10px;
-    border-radius: 25px;
+    padding: 1.736vw 0.579vw;
+    border-radius: 1.447vw;
     border: 1px dashed #052453;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(107deg, rgba(11, 101, 238, 0.70) 2.77%, rgba(0, 23, 58, 0.70) 117.6%);
     filter: blur(0.5px);

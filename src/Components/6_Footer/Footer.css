@@ -4,7 +4,7 @@
     height: 100vh;
     /* position: fixed;
     bottom: 0; */
-    gap: 1rem;
+    gap: 1vw;
     overflow: hidden; /* fixing some stupid horizontal scroll */
 }
 
@@ -22,9 +22,9 @@
 /* Font Requirements */
 .BlueFooter > * {
     color: var(--footerTextColor);
-    font-size: clamp(1rem, 1.2rem, 1.3rem);    
-    line-height: clamp(1.2rem, 1.2rem, 1.5rem);
-    letter-spacing: clamp(0.1rem, 0.2rem, 0.3rem);
+    font-size: 1.2vw; 
+    line-height: 1.2vw;
+    letter-spacing: 0.2vw;
 }
 
 .Grid > * {
@@ -38,7 +38,7 @@
 
 .FooterHeading { 
     font-weight: var(--bold);
-    line-height: clamp(3.2rem, 3.3rem, 3.6rem);
+    line-height: 3.2vw;
 }
 
 .FooterContent {

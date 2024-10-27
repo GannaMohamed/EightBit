@@ -1,6 +1,5 @@
 .ServicesInfo {
   height: 90vh;
-  /* margin-top: 3.819vw; */
 }
 
 .ServicesInfo .Head {
@@ -27,6 +26,10 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.ServicesInfo .Body {
+  max-width: 90%;
 }
 
 .ServicesInfo .NumberSquare {

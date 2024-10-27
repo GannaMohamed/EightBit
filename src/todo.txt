@@ -1,0 +1,14 @@
+RESPONSIVE
+[o] vertical layouting
+[o] horizontal layouting (lining with navbar)
+[o] fix services scroll
+[o] font mediaquery
+[] reponsive split
+[] lines from the square
+[] heights/widths mediaquery (mobile or web's thing)
+[o] limit maximum page stretching
+
+SCROLL
+[] cube transition among pages
+
+

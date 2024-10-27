@@ -25,15 +25,14 @@ export default function Footer() {
             <Grid item container xs={12} className="FooterColumns">
               {footerContent.map((section, index) => (
                 <Grid
-                  container
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
+                  container // Use the container prop
                   xs={12}
                   md={4}
-                  spacing={1}
+                  spacing={2}
                   key={index}
-                  className="Grid"
+                  className="Grid col"
+                  justifyContent="center" // Center horizontally
+                  alignItems="center" // Center vertically
                 >
                   <h4 className="FooterHeading text-uppercase">
                     {section.heading}
