@@ -43,8 +43,15 @@ const Keybaord = styled.img`
 const Shadow = styled.img`
   width: 38.426vw;
   position: absolute;
-  left: 8vw;
-  top: 37vh;
+  ${"" /* left: 0vw; */}
+  top: 90%;
+  fill: radial-gradient(
+    712.05% 120.39% at -14.32% 86.21%,
+    #000 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(8px);
+  transform: rotate(15deg);
 `;
 const Platform = styled.img`
   width: inherit;
@@ -57,11 +64,11 @@ export default function WebTemplate({ img, className }) {
   return (
     <div>
       <Container>
-        <Shadow src={shadow} alt="img" />
         <LaptopContainer className="Lap position-relative">
           <Example className="example" src={img} alt="Web Example" />
           <Laptop src={screen} alt="img" />
-          <Keybaord src={keyboard} alt="Leybaord" />
+          <Keybaord src={keyboard} alt="Leybaord" />{" "}
+          <Shadow src={shadow} alt="img" />
         </LaptopContainer>
         <Platform src={platform} alt="img" />
       </Container>
