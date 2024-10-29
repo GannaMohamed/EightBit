@@ -1,5 +1,5 @@
 import React from "react";
-import Mobile from "../../Assets/Mobile.svg";
+import mobile from "../../Assets/mobile.svg";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -21,7 +21,7 @@ export default function MobTemplate({ className, img }) {
   return (
     <Container className="TempContainer">
       <Example src={img} className="example" alt="Mobile App" />
-      <img src={Mobile} alt="Mobile Portfolio" />
+      <img src={mobile} alt="Mobile Portfolio" />
     </Container>
   );
 }
