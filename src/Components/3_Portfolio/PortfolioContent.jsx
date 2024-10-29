@@ -38,8 +38,10 @@ export default function PortfolioContent({ type }) {
         <button className="SeeMore semibold">See More</button>
       </Content>
       <div className="d-flex">
-        <WebTemplate img={webexample} className="webTemplate" />
-        {/* <MobTemplate img={mobexample} /> */}
+        {type === "web" && (
+          <WebTemplate img={webexample} className="webTemplate" />
+        )}
+        {type === "mobile" && <MobTemplate img={mobexample} />}
       </div>
     </div>
   );

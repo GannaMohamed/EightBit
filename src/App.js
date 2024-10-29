@@ -51,7 +51,8 @@ function App() {
         <Home id="home"></Home>
         <About id="about"></About>
         <About2></About2>
-        <Portfolio id="portfolio"></Portfolio>
+        <Portfolio id="portfolio" type={"web"}></Portfolio>
+        <Portfolio type={"mobile"}></Portfolio>
         {/* <Services id="services"></Services> */}
         {servicesdata.map((service) => (
           <ServicesInfo service={service} />

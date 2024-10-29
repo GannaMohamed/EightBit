@@ -20,7 +20,7 @@ const Title = styled.h2`
   -webkit-text-fill-color: transparent;
 `;
 
-export default function Portfolio({ className }) {
+export default function Portfolio({ className, type }) {
   return (
     <div className={`PortfolioPage col ${className}`}>
       <div className={`col`}>
@@ -34,7 +34,7 @@ export default function Portfolio({ className }) {
           </div>
         </div>
         {/* Content Section */}
-        <PortfolioContent type="mobile" />
+        <PortfolioContent type={type} />
       </div>
     </div>
   );
