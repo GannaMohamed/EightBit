@@ -1,23 +1,18 @@
 import React from "react";
-
-import vector1 from "../../Assets/Vector 1.png";
-import vector2 from "../../Assets/Vector 2.png";
-
 import Box from "./Box/Box";
 
 export default function HomeContent({ show = "false" }) {
   return (
     <div
-      className={` HomeContent position-absolute justify-content-center d-flex w-100 
+      className={`HomeContent position-absolute centered d-flex w-100 
        ${show ? "show" : ""}`}
     >
-      <Box position="left" dashvector={vector2}>
+      <Box position="left">
         We see a world where every business, no matter its size, can leverage
         technology to streamline operations, engage customers more effectively,
         and achieve lasting growth.
       </Box>
-      <div style={{ width: "35vw" }}></div>
-      <Box position="right" dashvector={vector1}>
+      <Box position="right">
         At 8-Bit Solutions, security is a top priority. We ensure all our
         solutions meet global compliance standards like GDPR, and we protect
         your intellectual property with robust legal safeguards.

@@ -8,36 +8,6 @@
       /* font-size: 260px; */
 } 
 
-.line {
-/* Default styles */
-width: 90vw; /* Width responsive to 90% of the viewport width */
-max-width: 375px; /* Sets a maximum width to prevent it from getting too large */
-height: auto; /* Adjusts the height automatically to keep the aspect ratio */
-flex-shrink: 0; /* Prevents the item from shrinking */
-
-/* For smaller devices (below 768px wide) */
-@media (max-width: 768px) {
-  width: 100vw; /* Full width on smaller screens */
-  max-width: 320px; /* Adjusts max-width for smaller devices */
-  height: auto; /* Maintains aspect ratio */
-}
-
-/* For extra small devices (below 480px wide) */
-@media (max-width: 480px) {
-  width: 100vw; /* Full width on very small screens */
-  max-width: 280px; /* Adjusts max-width for extra small screens */
-  height: auto;
-}
-
-/* For very large screens (above 1920px wide) */
-@media (min-width: 1921px) {
-  width: 50vw; /* Reduce width to half the viewport width */
-  max-width: 800px; /* Allows it to expand but with a sensible maximum */
-  height: auto; /* Keeps the aspect ratio */
-}
-
-}
-
 .CubeHome {
   top: -5%;
 }
@@ -72,10 +42,8 @@ flex-shrink: 0; /* Prevents the item from shrinking */
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(41%) hue-rotate(300deg) brightness(94%) contrast(74%);
 }
 
-
-
 .LogoOnCube, .HomeContent {
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 0.5ease;
 }
 
