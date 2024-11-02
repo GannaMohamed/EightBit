@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Home.css";
-
-import Cube from "../Cube/Cube";
 import HomeContent from "./HomeContent";
 import Image from "../general/Image";
 import { Logomark } from "../../Utils/assets";
 import { useState } from "react";
 
-export default function Home({ className }) {
+export default function Home({ className, CubeComponent }) {
   const [move, setMove] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,7 +18,7 @@ export default function Home({ className }) {
   return (
     <div id="home" className={`HomeContainer ${className}`}>
       <h1 className="HomeTitle extralight">8 BIT</h1>
-      <Cube
+      <CubeComponent
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
         Width="20vw"
@@ -28,7 +26,7 @@ export default function Home({ className }) {
         move={move}
       >
         <Image className={`LogoOnCube ${move && "show"}`} src={Logomark} />
-      </Cube>
+      </CubeComponent>
       <HomeContent show={move} />
     </div>
   );

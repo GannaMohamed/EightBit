@@ -1,30 +1,54 @@
 .NavLogo {
-    width: 5vw;
+  width: 5vw;
 }
 
 .NavContainer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    padding: 0 5vw;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw;
 }
 
+/* NavItem styling */
+.NavItem {
+  position: relative;
+  transition: color 0.5s ease, font-size 0.5s ease !important;
+}
 
-
+/* Remove any default underline from anchor elements */
 .NavItem > * {
-    font-size: 1.3vw;
-    /* margin-left: 3vw; */
-    transition: text-decoration 0.5s ease ;
-    color: var(--brightBlue) !important;
+  font-size: 1.3vw;
+  color: var(--brightBlue) !important;
+  text-decoration: none !important; /* Remove default underline */
+  transition: color 0.5s ease, font-size 0.5s ease !important;
 }
 
-.ActiveNavItem > * {
-    color: var(--oxfordBlue) !important;
+.NavItem:hover > * {
+  color: var(--oxfordBlue) !important;
+  font-size: 1.5vw;
 }
 
-.HoverNavItem {
-    /* ??? */
+/* Active NavItem styling with transition on font size */
+.NavItem.active > * {
+  color: var(--oxfordBlue) !important;
+  font-size: 1.5vw;
+}
+
+/* Underline effect on hover using :after */
+.NavItem:after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Adjust this to position underline below text */
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background-color: var(--oxfordBlue);
+  transition: all 0.3s ease;
+}
+
+.NavItem:hover:after {
+  left: 0;
+  right: 0;
 }

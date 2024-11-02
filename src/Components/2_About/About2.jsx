@@ -14,30 +14,7 @@ const Title = styled.h2`
   -webkit-text-fill-color: transparent;
 `;
 
-const Box = styled.div`
-  width: 23vw;
-  padding: 1.7vw 2.4vw;
-  margin: 2.3vw;
-  border-radius: 25px;
-  background: var(
-    --Linear-2,
-    linear-gradient(200deg, #0140a0 13.16%, #00173a 98.72%)
-  );
-  box-shadow: 0px 4px 9px 0px #0140a0;
-  color: var(--Lavender-Blue, #e0e5f3);
-  text-align: center;
-
-  &:nth-child(2) {
-    position: relative;
-    top: 2.3vw;
-    background: var(
-      --linear-1,
-      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
-      linear-gradient(120deg, #0140a0 31.58%, #00173a 121.41%)
-    );
-  }
-`;
+const Box = styled.div``;
 
 const BoxTitle = styled.div`
   font-weight: var(--semibold);
@@ -56,21 +33,21 @@ export default function About2() {
     <div className="About2Page centered col">
       <Title>Why Choose Us</Title>
       <div className="AboutBoxesContainer">
-        <Box>
+        <Box className="Box">
           <BoxTitle>Future Ready</BoxTitle>
           <BoxContent>
             We stay ahead of the curve, helping you adapt to a rapidly evolving
             digital landscape.
           </BoxContent>
         </Box>
-        <Box>
+        <Box className="Box SecBox">
           <BoxTitle>Customized Solutions</BoxTitle>
           <BoxContent>
             No two businesses are the same. We craft solutions that fit your
             unique needs.
           </BoxContent>
         </Box>
-        <Box>
+        <Box className="Box">
           <BoxTitle>Trusted by Businesses</BoxTitle>
           <BoxContent>
             Our focus on quality, security, and compliance ensures your growth

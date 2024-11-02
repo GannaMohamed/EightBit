@@ -1,12 +1,3 @@
-.AboutPage {
-    /* margin: 9vw; */
-}
-
-.AboutContainer {
-    /* position: relative; */
-    
-}
-
 .AboutContent {
     gap: 2vh;
     flex-grow: 1;
@@ -39,10 +30,58 @@
     height: inherit;
 }
 
-.AboutBoxesContainer > * {
-    margin-top: 2.3vw;
-    background: var(--linear1, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
+/* Gradient Animation Keyframes - Forward (Hover) */
+@keyframes gradientAnimationForward {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
 }
+
+/* Gradient Animation Keyframes - Reverse (Non-Hover) */
+@keyframes gradientAnimationReverse {
+  50% {
+    background-position: 100% 5%;
+  }
+}
+
+/* Box Styles */
+.Box {
+  width: 23vw;
+  padding: 1.7vw 2.4vw;
+  margin: 2.3vw;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--Lavender-Blue, #e0e5f3);
+  background: linear-gradient(200deg, #0140a0 13.16%, #00173a 98.72%);
+  background-size: 200% 200%;
+  box-shadow: 0px 4px 9px rgba(1, 64, 160, 0.5);
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
+
+  /* Apply reverse animation initially */
+  animation: gradientAnimationReverse 1s ease-out ;
+}
+
+/* Hover State */
+.Box:hover {
+  animation: gradientAnimationForward 5s ease infinite;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(1, 64, 160, 0.7);
+}
+
+/* Specific Styles for the 2nd Box */
+.SecBox {
+  position: relative;
+  top: 2.3vw;
+  background: linear-gradient(120deg, #00173a 31.58%, #0140a0 121.41%);
+}
+
+
 
 .WhoVector {
     position: absolute;
