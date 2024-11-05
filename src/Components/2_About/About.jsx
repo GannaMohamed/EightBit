@@ -7,7 +7,7 @@ export default function About({ className, CubeComponent }) {
     <div className={`AboutPage col ${className}`}>
       <img className="WhoVector" src={vector} alt="Curved Dashlines" />
       <div className="AboutContent d-flex col justify-content-center">
-        {/* <CubeComponent Width="20vw" className={`CubeAbout`} moveElement={0} /> */}
+        <CubeComponent Width="20vw" className={`CubeAbout`} moveElement={0} />
         <h2>Who We Are ?</h2>
         <p style={{ width: "50%" }}>
           At 8-Bit Solutions, we harness cutting-edge technology to drive

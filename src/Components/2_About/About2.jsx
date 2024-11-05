@@ -28,7 +28,7 @@ const BoxContent = styled.div`
   font-size: 1.4vw;
 `;
 
-export default function About2() {
+export default function About2({ CubeComponent }) {
   return (
     <div className="About2Page centered col">
       <Title>Why Choose Us</Title>
@@ -54,6 +54,13 @@ export default function About2() {
             is sustainable and secure.
           </BoxContent>
         </Box>
+      </div>{" "}
+      <div className="w-100">
+        <CubeComponent
+          Width="10vw"
+          className={`CubeAbout2 float-right`}
+          moveElement={0}
+        />
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const Title = styled.h2`
   -webkit-text-fill-color: transparent;
 `;
 
-export default function Portfolio({ className, type }) {
+export default function Portfolio({ className, type, CubeComponent }) {
   return (
     <div className={`PortfolioPage col ${className}`}>
       <div className={`col`}>
@@ -30,7 +30,12 @@ export default function Portfolio({ className, type }) {
           <div className="d-flex align-items-start PortfolioCubeContainer">
             {/* <img className="WebVector" src={WebVector} alt="Dashed Lines" /> */}
             <img className="WebVector" src={MobVector} alt="Dashed Lines" />
-            <Cube moveElement={4} Width="13.693vw" />
+            {/* <Cube moveElement={4} Width="" /> */}
+            <CubeComponent
+              Width="13.693vw"
+              className={`CubePortfolio`}
+              moveElement={0}
+            />
           </div>
         </div>
         {/* Content Section */}

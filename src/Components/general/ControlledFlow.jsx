@@ -7,7 +7,7 @@ import { ScrollContainer, ScrollPage, Animator } from "react-scroll-motion";
 
 export default function ControlledFlow({ children, className }) {
   const sectionsRef = useRef([]);
-  const [activeSection, setActiveSection] = useState(0);
+  // const [activeSection, setActiveSection] = useState(0);
 
   // useEffect(() => {
   //   const observer = new IntersectionObserver(

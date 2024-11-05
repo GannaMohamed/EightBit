@@ -13,25 +13,9 @@ import Cube from "./Components/Cube/Cube";
 import { servicesdata } from "./data";
 import ServicesInfo from "./Components/4_Services/ServicesInfo";
 
-// Animation SCROLL MOTION
-import {
-  Move,
-  MoveIn,
-  Sticky,
-  ScrollContainer,
-  ScrollPage,
-  Animator,
-  batch,
-  MoveOut,
-  FadeOut,
-  Fade,
-  FadeIn,
-} from "react-scroll-motion";
-
 //Animation GSAP
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
 import { useEffect } from "react";
 
 function App() {
@@ -59,6 +43,7 @@ function App() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollSmoother);
 
     // frame1: 8BIT APPEARS
     // gsap.to(".HomeContainer", {
@@ -66,11 +51,17 @@ function App() {
     //   y: -500,
     // });
 
+    // ScrollSmoother.create({
+    //   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+    //   effects: true, // looks for data-speed and data-lag attributes on elements
+    //   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+    // });
+
     // frame2: CubeHome to CubeAbout
-    gsap.to(".Cube", {
+    gsap.to(".CubeHome", {
       duration: 0.7,
-      y: 500,
-      x: 500,
+      y: "35vw",
+      x: "35vw",
       scrollTrigger: {
         trigger: ".AboutPage",
         start: "top 60%",
@@ -79,17 +70,55 @@ function App() {
       },
     });
 
-    // frame2: CubeAbout to CubeAbout2
-    // gsap.to(".CubeHome", {
-    //   duration: 1,
-    //   y: 500,
-    //   x: 500,
-    //   scrollTrigger: {
-    //     trigger: ".AboutPage",
-    //     start: "top 60%",
-    //     end: "top 40%",
-    //   },
-    // });
+    // frame3: CubeAbout to CubeAbout2
+    gsap.to(".CubeAbout", {
+      duration: 0.7,
+      y: "80vw",
+      // width: "10vw",
+      scrollTrigger: {
+        trigger: ".About2Page",
+        start: "top 60%",
+        end: "top 40%",
+        toggleActions: "play none reverse resume",
+      },
+    });
+
+    // frame4: CubeAbout2 to CubePortfolio
+    gsap.to(".CubeAbout2", {
+      duration: 0.7,
+      y: "20.255vw",
+      x: "-5.787vw",
+      scrollTrigger: {
+        trigger: ".PortfolioPage",
+        start: "top 60%",
+        end: "top 40%",
+        toggleActions: "play none reverse resume",
+      },
+    });
+
+    // frame5: CubePortfolio to CubeServices
+    gsap.to(".CubePortfolio", {
+      duration: 0.7,
+      y: "46.296vw",
+      scrollTrigger: {
+        trigger: ".ServicesInfo",
+        start: "top 60%",
+        end: "top 40%",
+        toggleActions: "play none reverse resume",
+      },
+    });
+
+    // frame6: CubeServices to CubeContact
+    gsap.to(".CubePortfolio", {
+      duration: 0.7,
+      y: "46.296vw",
+      scrollTrigger: {
+        trigger: ".ServicesInfo",
+        start: "top 60%",
+        end: "top 40%",
+        toggleActions: "play none reverse resume",
+      },
+    });
   });
 
   return (
@@ -101,27 +130,28 @@ function App() {
         </div>
       </div>
       <Navbar />
-      <ScrollContainer>
-        <ControlledFlow
-          className="ControlledFlow"
-          // onCubeTransform={handleCubeTransform}
-        >
-          <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
+      {/* <ScrollContainer> */}
+      <ControlledFlow
+        className="ControlledFlow"
+        // onCubeTransform={handleCubeTransform}
+      >
+        <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
 
-          <About
-            id="about"
-            // CubeComponent={(props) => <Cube {...props} />}
-          ></About>
-          <About2></About2>
-          <Portfolio id="portfolio" type={"web"}></Portfolio>
-          <Portfolio type={"mobile"}></Portfolio>
-          {/* <Services id="services"></Services> */}
-          {servicesdata.map((service) => (
-            <ServicesInfo service={service} />
-          ))}
-          <Contact id="contact"></Contact>
-        </ControlledFlow>
-      </ScrollContainer>
+        <About id="about" CubeComponent={(props) => <Cube {...props} />} />
+        <About2 CubeComponent={(props) => <Cube {...props} />} />
+        <Portfolio
+          CubeComponent={(props) => <Cube {...props} />}
+          id="portfolio"
+          type={"web"}
+        />
+        {/* <Portfolio type={"mobile"}></Portfolio> */}
+        {/* <Services id="services"></Services> */}
+        {servicesdata.map((service) => (
+          <ServicesInfo service={service} />
+        ))}
+        <Contact id="contact"></Contact>
+      </ControlledFlow>
+      {/* </ScrollContainer> */}
     </div>
   );
 }
