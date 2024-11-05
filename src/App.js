@@ -13,6 +13,7 @@ import Cube from "./Components/Cube/Cube";
 import { servicesdata } from "./data";
 import ServicesInfo from "./Components/4_Services/ServicesInfo";
 
+// Animation SCROLL MOTION
 import {
   Move,
   MoveIn,
@@ -22,7 +23,16 @@ import {
   Animator,
   batch,
   MoveOut,
+  FadeOut,
+  Fade,
+  FadeIn,
 } from "react-scroll-motion";
+
+//Animation GSAP
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+import { useEffect } from "react";
 
 function App() {
   // const [cubeStyle, setCubeStyle] = useState({});
@@ -44,6 +54,44 @@ function App() {
   //       break;
   //   }
   // };
+
+  // const FadeUp = batch(Fade(), Move(), Sticky());
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // frame1: 8BIT APPEARS
+    // gsap.to(".HomeContainer", {
+    //   scrollTrigger: ".Home", // start the animation when ".box" enters the viewport (once)
+    //   y: -500,
+    // });
+
+    // frame2: CubeHome to CubeAbout
+    gsap.to(".Cube", {
+      duration: 0.7,
+      y: 500,
+      x: 500,
+      scrollTrigger: {
+        trigger: ".AboutPage",
+        start: "top 60%",
+        end: "top 40%",
+        toggleActions: "play none reverse resume",
+      },
+    });
+
+    // frame2: CubeAbout to CubeAbout2
+    // gsap.to(".CubeHome", {
+    //   duration: 1,
+    //   y: 500,
+    //   x: 500,
+    //   scrollTrigger: {
+    //     trigger: ".AboutPage",
+    //     start: "top 60%",
+    //     end: "top 40%",
+    //   },
+    // });
+  });
+
   return (
     <div className="App">
       <div className="Background">
@@ -58,29 +106,11 @@ function App() {
           className="ControlledFlow"
           // onCubeTransform={handleCubeTransform}
         >
-          <Home
-            id="home"
-            CubeComponent={(props) => (
-              <Cube
-                // animationProps={{
-                //   animation: batch(MoveOut(1000, 1000)),
-                // }} // Makes it stay at a fixed point
-                move={true}
-                {...props}
-              />
-            )}
-          />
+          <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
 
           <About
             id="about"
-            CubeComponent={(props) => (
-              <Cube
-                // animationProps={{
-                //   animation: batch(MoveIn(1000, 0), MoveOut(1000, 0)),
-                // }} // Animates cube out to the right
-                {...props}
-              />
-            )}
+            // CubeComponent={(props) => <Cube {...props} />}
           ></About>
           <About2></About2>
           <Portfolio id="portfolio" type={"web"}></Portfolio>

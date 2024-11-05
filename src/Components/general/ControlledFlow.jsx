@@ -37,15 +37,13 @@ export default function ControlledFlow({ children, className }) {
     <div className={className}>
       <ReactLenis root>
         {React.Children.map(children, (child, index) => (
-          <ScrollPage>
-            <div
-              id={child.props.id}
-              className="Page"
-              ref={(el) => (sectionsRef.current[index] = el)}
-            >
-              {child}
-            </div>
-          </ScrollPage>
+          <div
+            id={child.props.id}
+            className="Page"
+            ref={(el) => (sectionsRef.current[index] = el)}
+          >
+            {child}
+          </div>
         ))}
       </ReactLenis>
       <Footer />

@@ -536,7 +536,7 @@ export default function Cube({
   Width = "500px",
   children,
   props,
-  animationProps,
+  animation,
   move,
   moveElement,
   handleMouseEnter,
@@ -544,7 +544,7 @@ export default function Cube({
   hoverOneElement,
 }) {
   return (
-    <Animator animation={animationProps?.animation}>
+    <Animator animation={animation?.animation}>
       <CubeContainer
         className={`Cube  ${move && "move"} ${className}`}
         cubeWidth={Width}

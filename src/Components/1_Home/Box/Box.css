@@ -1,6 +1,7 @@
 .HomeContent {
   gap: 15vw;
   top: 27vh;
+  z-index: -1;
 }
 .box {
     --box-width: 25vw;
