@@ -9,13 +9,10 @@ import About2 from "./Components/2_About/About2";
 import Portfolio from "./Components/3_Portfolio/Portfolio";
 import Contact from "./Components/5_Contact/Contact";
 import Cube from "./Components/Cube/Cube";
-// import Footer from "./Components/6_Footer/Footer";
 import { servicesdata } from "./data";
 import ServicesInfo from "./Components/4_Services/ServicesInfo";
 
-//Animation GSAP
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { initAnimations } from "./Utils/Animations";
 import { useEffect } from "react";
 
 function App() {
@@ -42,84 +39,8 @@ function App() {
   // const FadeUp = batch(Fade(), Move(), Sticky());
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    // gsap.registerPlugin(ScrollSmoother);
-
-    // frame1: 8BIT APPEARS
-    // gsap.to(".HomeContainer", {
-    //   scrollTrigger: ".Home", // start the animation when ".box" enters the viewport (once)
-    //   y: -500,
-    // });
-
-    // ScrollSmoother.create({
-    //   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-    //   effects: true, // looks for data-speed and data-lag attributes on elements
-    //   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-    // });
-
-    // frame2: CubeHome to CubeAbout
-    gsap.to(".CubeHome", {
-      duration: 0.7,
-      y: "35vw",
-      x: "35vw",
-      scrollTrigger: {
-        trigger: ".AboutPage",
-        start: "top 60%",
-        end: "top 40%",
-        toggleActions: "play none reverse resume",
-      },
-    });
-
-    // frame3: CubeAbout to CubeAbout2
-    gsap.to(".CubeAbout", {
-      duration: 0.7,
-      y: "80vw",
-      // width: "10vw",
-      scrollTrigger: {
-        trigger: ".About2Page",
-        start: "top 60%",
-        end: "top 40%",
-        toggleActions: "play none reverse resume",
-      },
-    });
-
-    // frame4: CubeAbout2 to CubePortfolio
-    gsap.to(".CubeAbout2", {
-      duration: 0.7,
-      y: "20.255vw",
-      x: "-5.787vw",
-      scrollTrigger: {
-        trigger: ".PortfolioPage",
-        start: "top 60%",
-        end: "top 40%",
-        toggleActions: "play none reverse resume",
-      },
-    });
-
-    // frame5: CubePortfolio to CubeServices
-    gsap.to(".CubePortfolio", {
-      duration: 0.7,
-      y: "46.296vw",
-      scrollTrigger: {
-        trigger: ".ServicesInfo",
-        start: "top 60%",
-        end: "top 40%",
-        toggleActions: "play none reverse resume",
-      },
-    });
-
-    // frame6: CubeServices to CubeContact
-    gsap.to(".CubePortfolio", {
-      duration: 0.7,
-      y: "46.296vw",
-      scrollTrigger: {
-        trigger: ".ServicesInfo",
-        start: "top 60%",
-        end: "top 40%",
-        toggleActions: "play none reverse resume",
-      },
-    });
-  });
+    initAnimations(); // Call the animations function on mount
+  }, []);
 
   return (
     <div className="App">
@@ -137,10 +58,10 @@ function App() {
       >
         <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
 
-        <About id="about" CubeComponent={(props) => <Cube {...props} />} />
-        <About2 CubeComponent={(props) => <Cube {...props} />} />
+        <About id="about" CubeComponent={(props) => <p />} />
+        <About2 CubeComponent={(props) => <p />} />
         <Portfolio
-          CubeComponent={(props) => <Cube {...props} />}
+          CubeComponent={(props) => <p />}
           id="portfolio"
           type={"web"}
         />
@@ -149,7 +70,7 @@ function App() {
         {servicesdata.map((service) => (
           <ServicesInfo service={service} />
         ))}
-        <Contact id="contact"></Contact>
+        <Contact id="contact" />
       </ControlledFlow>
       {/* </ScrollContainer> */}
     </div>
