@@ -1,3 +1,9 @@
+.ControlledFlow {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
 .Page {
   height: 100vh;
   /* margin-top: 90px; */

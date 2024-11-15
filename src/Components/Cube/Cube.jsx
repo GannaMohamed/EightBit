@@ -544,54 +544,54 @@ export default function Cube({
   hoverOneElement,
 }) {
   return (
-    <Animator animation={animation?.animation}>
-      <CubeContainer
-        className={`Cube  ${move && "move"} ${className}`}
-        cubeWidth={Width}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        {...props}
-      >
-        <CubeElement5
-          className={`cube5 
+    // <Animator animation={animation?.animation}>
+    <CubeContainer
+      className={`Cube  ${move && "move"} ${className}`}
+      cubeWidth={Width}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      {...props}
+    >
+      <CubeElement5
+        className={`cube5 
         ${(move || moveElement === 4) && "move"}
         ${hoverOneElement && "hoverOneElement5"}
         
         `}
-        />
-        <CubeElement6
-          className={`cube6 ${(move || moveElement === 5) && "move"}
+      />
+      <CubeElement6
+        className={`cube6 ${(move || moveElement === 5) && "move"}
         ${hoverOneElement && "hoverOneElement6"}`}
-        />
-        <CubeElement7
-          className={`cube7 ${(move || moveElement === 6) && "move"}
+      />
+      <CubeElement7
+        className={`cube7 ${(move || moveElement === 6) && "move"}
         ${hoverOneElement && "hoverOneElement7"}`}
-        />
-        <CubeElement8
-          className={`cube8 ${(move || moveElement === 7) && "move"}
+      />
+      <CubeElement8
+        className={`cube8 ${(move || moveElement === 7) && "move"}
         ${hoverOneElement && "hoverOneElement8"}`}
-        />
-        <CubeElement2
-          className={`cube2 ${(move || moveElement === 1) && "move"}
+      />
+      <CubeElement2
+        className={`cube2 ${(move || moveElement === 1) && "move"}
         ${hoverOneElement && "hoverOneElement2"}`}
-        />
-        <CubeElement3
-          className={`cube3 ${(move || moveElement === 2) && "move"}
+      />
+      <CubeElement3
+        className={`cube3 ${(move || moveElement === 2) && "move"}
         ${hoverOneElement && "hoverOneElement3"}`}
-        />
-        <CubeElement1
-          className={`cube1 ${(move || moveElement === 0) && "move"}
+      />
+      <CubeElement1
+        className={`cube1 ${(move || moveElement === 0) && "move"}
         ${hoverOneElement && "hoverOneElement1"}`}
-        />
-        <CubeElement4
-          className={`cube4 ${(move || moveElement === 3) && "move"}
+      />
+      <CubeElement4
+        className={`cube4 ${(move || moveElement === 3) && "move"}
         ${hoverOneElement && "hoverOneElement4"}`}
-        />
+      />
 
-        {children}
+      {children}
 
-        {/* <CubeElement className={`cube1 ${move && 'move'}`} move={move} /> */}
-      </CubeContainer>
-    </Animator>
+      {/* <CubeElement className={`cube1 ${move && 'move'}`} move={move} /> */}
+    </CubeContainer>
+    // </Animator>
   );
 }

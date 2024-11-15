@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div className="FooterContainer col d-flex align-items-center justify-content-between">
       <div className="centered flex-grow-1 pt-5">
-        <Cube hoverOneElement={true} Width="14vw" className={`CubePortfolio`} />
+        {/* <Cube hoverOneElement={true} Width="14vw" className={``} /> */}
       </div>
       <div className="w-100">
         <div className="BlueFooter col justify-content-around align-items-center py-2">
