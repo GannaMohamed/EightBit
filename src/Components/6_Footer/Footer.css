@@ -5,14 +5,19 @@
     /* position: fixed;
     bottom: 0; */
     gap: 1vw;
-    overflow: hidden; /* fixing some stupid horizontal scroll */
+    /* overflow: hidden;  fixing some stupid horizontal scroll  */
+
+}
+
+.BlueFooterContainer {
+    width: 100vw;
 }
 
 .BlueFooter {
     --footerTextColor: var(--Lavender-Blue, #E0E5F3);
     /* width: 100%; */
     gap: 4vh;
-    height: 50vh;
+    /* height: 50vh; */
     /* position: absolute; */
     /* bottom: 0; */
     border-radius: 50px 50px 0px 0px;

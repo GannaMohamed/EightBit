@@ -1,5 +1,4 @@
 import React from "react";
-import Cube from "../Cube/Cube";
 import PortfolioContent from "./PortfolioContent";
 
 import styled from "styled-components";

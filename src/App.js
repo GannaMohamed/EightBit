@@ -11,11 +11,9 @@ import Contact from "./Components/5_Contact/Contact";
 import Cube from "./Components/Cube/Cube";
 import { servicesdata } from "./data";
 import ServicesInfo from "./Components/4_Services/ServicesInfo";
+import Footer from "./Components/6_Footer/Footer";
 
-import { initAnimations } from "./Utils/Animations";
-import { PathAnimations } from "./Utils/PathAnimation";
 import { useEffect } from "react";
-import Path from "./Components/general/Path";
 
 function App() {
   // const [cubeStyle, setCubeStyle] = useState({});
@@ -40,14 +38,8 @@ function App() {
 
   // const FadeUp = batch(Fade(), Move(), Sticky());
 
-  useEffect(() => {
-    // initAnimations();
-    PathAnimations();
-  }, []);
-
   return (
     <div className="App">
-      <Path />
       <div className="Background">
         <div className="GradientContainer">
           <div className="ellipse ellipse1"></div>
@@ -61,11 +53,10 @@ function App() {
         // onCubeTransform={handleCubeTransform}
       >
         <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
-
-        <About id="about" CubeComponent={(props) => <p />} />
-        <About2 CubeComponent={(props) => <p />} />
+        <About id="about" CubeComponent={(props) => <Cube {...props} />} />
+        <About2 CubeComponent={(props) => <Cube {...props} />} />
         <Portfolio
-          CubeComponent={(props) => <p />}
+          CubeComponent={(props) => <Cube {...props} />}
           id="portfolio"
           type={"web"}
         />
@@ -75,6 +66,7 @@ function App() {
           <ServicesInfo service={service} />
         ))}
         <Contact id="contact" />
+        <Footer id="footer" />
       </ControlledFlow>
       {/* </ScrollContainer> */}
     </div>
