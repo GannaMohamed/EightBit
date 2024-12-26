@@ -1,17 +1,23 @@
 .ControlledFlow {
   display: flex;
   flex-direction: column;
-  gap: 10vh;
+  /* gap: 10vh; */
+
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .Page {
   height: 100vh;
   /* margin-top: 90px; */
   opacity: 1;
-  transform: translateY(0);
+  /* transform: translateY(0); */
   transition: opacity 0.5s ease, transform 0.5s ease;
   /* border: 1px red solid;   */
   margin: 0 5.5vw;
+
+  scroll-snap-align: start; 
 
 }
 

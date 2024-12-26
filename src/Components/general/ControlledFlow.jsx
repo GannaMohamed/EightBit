@@ -36,22 +36,15 @@ export default function ControlledFlow({ children, className }) {
 
   return (
     <div className={className}>
-      <ReactLenis
-        // options={{ duration: 0.1, wheelMultiplier: 2 }}
-        options={{ autoRaf: false }}
-        // ref={lenisRef}
-        root
-      >
-        {React.Children.map(children, (child, index) => (
-          <div
-            id={child.props.id}
-            className="Page"
-            ref={(el) => (sectionsRef.current[index] = el)}
-          >
-            {child}
-          </div>
-        ))}
-      </ReactLenis>
+      {React.Children.map(children, (child, index) => (
+        <div
+          id={child.props.id}
+          className="Page"
+          ref={(el) => (sectionsRef.current[index] = el)}
+        >
+          {child}
+        </div>
+      ))}
     </div>
   );
 }
