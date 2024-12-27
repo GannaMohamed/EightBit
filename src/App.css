@@ -1,5 +1,18 @@
+html {
+  scroll-behavior: smooth  !important; 
+}
+
+html:focus-within {
+  scroll-behavior: smooth !important;
+}
+
 * {
   font-family: var(--font-family);
+}
+
+*::selection {
+  background-color: var(--oxfordBlue);
+  color: var(--lavenderBlue);
 }
 
 .App {
@@ -28,7 +41,7 @@
   border-radius: 500px;
   filter: blur(400px); /* it's not the same figma value but it's more accurate for web */
   width: var(--ellipseW);
-  height:  var(--ellipseW);
+  height: var(--ellipseW);
 }
 
 .ellipse1 {

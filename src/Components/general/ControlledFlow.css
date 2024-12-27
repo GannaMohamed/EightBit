@@ -3,17 +3,24 @@
   flex-direction: column;
   /* gap: 10vh; */
 
-  height: 100vh;
+  height: 95vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-padding-top: 5vh;
+  scroll-padding-bottom: 5vh;
+}
+
+.ControlledFlow::-webkit-scrollbar {
+  display: none;
 }
 
 .Page {
+  transition: all ease-in 700ms;
   height: 100vh;
   /* margin-top: 90px; */
   opacity: 1;
-  /* transform: translateY(0); */
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(0);
+  transition: opacity 0.7s ease-out;
   /* border: 1px red solid;   */
   margin: 0 5.5vw;
 
@@ -29,5 +36,5 @@
 
 .Page.fade-up {
   opacity: 0;
-  /* transform: translateY(-50px); */
+  /* transform: translateY(-1px); */
 }
