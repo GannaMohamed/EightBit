@@ -1,40 +1,53 @@
+/* LAYOUT */
 .ControlledFlow {
-  display: flex;
-  flex-direction: column;
-  /* gap: 10vh; */
+    --ControlledFlowHeight: 90vh;
+    position: fixed;
+    top: 10vh;
+    height: var(--ControlledFlowHeight);
+}
+.Page {
+    height: var(--ControlledFlowHeight);
+}
 
-  height: 95vh;
+
+
+
+
+
+/* SCROLL EFFECT */
+.ControlledFlow {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-padding-top: 5vh;
-  scroll-padding-bottom: 5vh;
 }
-
 .ControlledFlow::-webkit-scrollbar {
   display: none;
 }
-
 .Page {
-  transition: all ease-in 700ms;
-  height: 100vh;
-  /* margin-top: 90px; */
+  transition: transform ease-in 700ms;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.7s ease-out;
-  /* border: 1px red solid;   */
-  margin: 0 5.5vw;
-
+  transition: opacity 0.4s ease-in-out;
   scroll-snap-align: start; 
-
 }
-
-.Page > * {
-  /* margin-top: 90px; */
-  height: inherit;
-}
-
-
 .Page.fade-up {
   opacity: 0;
-  /* transform: translateY(-1px); */
 }
+
+/* OTHER STYLING */
+.ControlledFlow {
+  display: flex;
+  flex-direction: column;
+}
+.Page {
+  /* margin-top: 90px; */
+  /* border: 1px red solid;   */
+  margin: 0 5.5vw;
+}
+
+/* .Page > * { */
+  /* margin-top: 90px; */
+  /* height: inherit; */
+/* } */
+
+

@@ -4,7 +4,8 @@
 
 .SocialMediaIcon {
     width: 1.5vw;
-    transition: all 0.4s ease;
+    /* transition: all 0.4s ease; */
+    transition: filter 0.4s ease; 
 }
 
 .SocialMediaIcon:hover {

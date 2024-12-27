@@ -12,7 +12,6 @@ import Cube from "./Components/Cube/Cube";
 import { servicesdata } from "./data";
 import ServicesInfo from "./Components/4_Services/ServicesInfo";
 import Footer from "./Components/6_Footer/Footer";
-
 import { useEffect } from "react";
 
 function App() {
@@ -37,6 +36,25 @@ function App() {
   // };
 
   // const FadeUp = batch(Fade(), Move(), Sticky());
+
+  useEffect(() => {
+    function debounce(func, delay) {
+      let timeoutId;
+      return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+
+    // Debounce font size changes
+    const debouncedFontSizeChange = debounce(() => {
+      // Update html font size here
+      document.documentElement.style.fontSize = "120%";
+    }, 100); // Debounce delay (in milliseconds)
+
+    // Trigger debounced font size change
+    debouncedFontSizeChange();
+  });
 
   return (
     <div className="App">

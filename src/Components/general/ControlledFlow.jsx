@@ -22,7 +22,7 @@ export default function ControlledFlow({ children, className }) {
         });
       },
       {
-        threshold: 0.8,
+        threshold: 0.9,
         rootMargin: "0px 0px 0px 0px",
       }
     );
