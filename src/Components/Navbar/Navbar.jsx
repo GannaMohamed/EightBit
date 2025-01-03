@@ -6,8 +6,9 @@ import NavItem from "./NavItem";
 import LogoFull from "../../Assets/LogoFull.svg";
 import { navdata } from "../../data";
 import "./Navbar.css";
+import withBurgerNav from "./withBurgerNav";
 
-export default function Navbar() {
+function Navbar({ isMobile, isMenuOpen }) {
   const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
@@ -38,26 +39,50 @@ export default function Navbar() {
         if (section) observer.unobserve(section);
       });
     };
-  }, []);
+  }, [isMobile]);
 
   return (
-    <div className="NavContainer">
-      <Image className="NavLogo" src={LogoFull} alt="Logo" />
-      <List
-        items={navdata}
-        srcName={"navItem"}
-        className="d-flex w-50 justify-content-between align-items-center"
-        ItemComponent={(props) => (
-          <NavItem
-            {...props}
-            className={`NavItem ${
-              activeSection === props.navItem.url.replace("#", "")
-                ? "active"
-                : ""
-            }`}
+    <>
+      <div className="NavContainer">
+        <Image className="NavLogo" src={LogoFull} alt="Logo" />
+        {!isMobile ? (
+          <List
+            items={navdata}
+            srcName={"navItem"}
+            className="d-flex w-50 justify-content-between align-items-center"
+            ItemComponent={(props) => (
+              <NavItem
+                {...props}
+                className={`NavItem ${
+                  activeSection === props.navItem.url.replace("#", "")
+                    ? "active"
+                    : ""
+                }`}
+              />
+            )}
           />
+        ) : (
+          <>
+            <List
+              items={navdata}
+              srcName={"navItem"}
+              className={`MobileNavList ${isMenuOpen ? "show" : ""}`}
+              ItemComponent={(props) => (
+                <NavItem
+                  {...props}
+                  className={`NavItem ${
+                    activeSection === props.navItem.url.replace("#", "")
+                      ? "active"
+                      : ""
+                  }`}
+                />
+              )}
+            />
+          </>
         )}
-      />
-    </div>
+      </div>
+    </>
   );
 }
+
+export default withBurgerNav(Navbar);

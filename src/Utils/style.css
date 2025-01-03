@@ -26,6 +26,8 @@
 
     --mediaWhiteFilter: brightness(0) saturate(100%) invert(92%) sepia(14%) saturate(388%) hue-rotate(193deg) brightness(100%) contrast(91%);
     --mediaHoverFilter: brightness(0) saturate(100%) invert(54%) sepia(61%) saturate(282%) hue-rotate(183deg) brightness(93%) contrast(93%);
+
+    --mobileBP: 768px;
 }
 
 .gradient1 {

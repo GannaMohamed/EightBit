@@ -6,9 +6,15 @@
 .AboutContent > h2 { 
     color: var(--oxfordBlue);
     font-weight: var(--bold);
-    font-size: 4.5vw;
-    letter-spacing: 0.579vw;
 
+}
+
+.AboutP1 {
+  width: 50%;
+}
+
+.AboutP2 {
+  width: 75%;
 }
 
 .CubeAbout {
@@ -20,8 +26,6 @@
 .AboutContent > p { 
     color: var(--oxfordBlue);
     font-weight: var(--medium);
-    font-size: 1.3vw;
-    letter-spacing: 0.145vw;
     line-height:187.5%;
 }
 
@@ -52,7 +56,8 @@
 
 /* Box Styles */
 .Box {
-  width: 23vw;
+  /* width: 23vw; */
+  aspect-ratio: 1.5;
   padding: 1.7vw 2.4vw;
   margin: 2.3vw;
   border-radius: 25px;
@@ -62,9 +67,18 @@
   background-size: 200% 200%;
   box-shadow: 0px 4px 9px rgba(1, 64, 160, 0.5);
   transition: transform 0.7s ease, box-shadow 0.7s ease;
+  box-sizing: border-box;
 
   /* Apply reverse animation initially */
   animation: gradientAnimationReverse 1s ease-out ;
+
+  p {
+  margin: 0;
+  }
+}
+
+.AboutBoxesContainer {
+    display: flex;
 }
 
 /* Hover State */
@@ -81,15 +95,43 @@
   background: linear-gradient(120deg, #00173a 31.58%, #0140a0 121.41%);
 }
 
-
-
 .WhoVector {
     position: absolute;
     top: 0;
     right: 24vw;
 }
 
-.AboutBoxesContainer {
-    display: flex;
+.CubeAbout2 {
+  position: relative;
+  bottom: 2vh;
 }
 
+@media (max-width: 600px) {
+  .AboutContent {
+    justify-content: end;
+  }
+
+  .AboutP1, .AboutP2 {
+    width: unset;
+  }
+}
+
+@media (max-width: 950px) {
+  .AboutBoxesContainer {display: flex; 
+    flex-direction: column;
+  }
+  
+  .Box {
+    aspect-ratio: unset;
+    max-width: 50%;
+    padding: 4vw; /* Add more padding for better spacing */
+    margin: 2vw;
+    border-radius: 15px; /* Slightly smaller border-radius */
+    text-align: left; /* Align text to the left for readability */
+    align-self: flex-start;
+  }
+
+  .SecBox {
+    top: unset;
+  align-self: flex-end;  }
+}

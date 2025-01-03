@@ -13,7 +13,6 @@
 
 
 
-
 /* SCROLL EFFECT */
 .ControlledFlow {
   overflow-y: scroll;
@@ -42,7 +41,7 @@
 .Page {
   /* margin-top: 90px; */
   /* border: 1px red solid;   */
-  margin: 0 5.5vw;
+  margin: 0 3vw; /* less smooth but more  */
 }
 
 /* .Page > * { */
@@ -51,3 +50,15 @@
 /* } */
 
 
+
+@media (max-width: 950px) {
+    .ControlledFlow {
+      top: 7vh
+    }
+}
+
+@media (max-width: 768px) {
+  .DashVector {
+    display: none;
+  }
+}

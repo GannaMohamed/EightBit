@@ -4,7 +4,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-      /* font-size: 260px; */
+    /* font-size: 260px; */
 } 
 
 .CubeHome {
@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;  /* This will center horizontally */
-  height: 100vh; /* Full height of the viewport */
+  height: var(--ControlledFlowHeight); /* Full height of the viewport */
   position: relative;
 }
 

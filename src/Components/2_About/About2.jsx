@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Title = styled.h2`
-  font-size: 5vw;
-  letter-spacing: 10px;
   font-weight: var(--bold);
   background: var(
     --Linear-3,
@@ -16,17 +14,12 @@ const Title = styled.h2`
 
 const Box = styled.div``;
 
-const BoxTitle = styled.div`
+const BoxTitle = styled.h5`
   font-weight: var(--semibold);
-  font-size: 2vw;
   letter-spacing: 2.1px;
 `;
 
-const BoxContent = styled.div`
-  line-height: 36px;
-  letter-spacing: 1.75px;
-  font-size: 1.4vw;
-`;
+const BoxContent = styled.p``;
 
 export default function About2({ CubeComponent }) {
   return (
@@ -54,7 +47,7 @@ export default function About2({ CubeComponent }) {
             is sustainable and secure.
           </BoxContent>
         </Box>
-      </div>{" "}
+      </div>
       <div className="w-100">
         <CubeComponent
           Width="10vw"

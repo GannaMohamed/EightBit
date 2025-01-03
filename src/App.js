@@ -1,5 +1,6 @@
 import "./App.css";
 import "./Utils/style.css";
+import "./Utils/fonts.css";
 
 import Navbar from "./Components/Navbar/Navbar";
 import ControlledFlow from "./Components/general/ControlledFlow";
@@ -13,6 +14,7 @@ import { servicesdata } from "./data";
 import ServicesInfo from "./Components/4_Services/ServicesInfo";
 import Footer from "./Components/6_Footer/Footer";
 import { useEffect } from "react";
+import { throttle } from "lodash";
 
 function App() {
   // const [cubeStyle, setCubeStyle] = useState({});
@@ -37,25 +39,6 @@ function App() {
 
   // const FadeUp = batch(Fade(), Move(), Sticky());
 
-  useEffect(() => {
-    function debounce(func, delay) {
-      let timeoutId;
-      return function (...args) {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => func.apply(this, args), delay);
-      };
-    }
-
-    // Debounce font size changes
-    const debouncedFontSizeChange = debounce(() => {
-      // Update html font size here
-      document.documentElement.style.fontSize = "120%";
-    }, 100); // Debounce delay (in milliseconds)
-
-    // Trigger debounced font size change
-    debouncedFontSizeChange();
-  });
-
   return (
     <div className="App">
       <div className="Background">
@@ -70,19 +53,19 @@ function App() {
         className="ControlledFlow"
         // onCubeTransform={handleCubeTransform}
       >
-        <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
+        {/* <Home id="home" CubeComponent={(props) => <Cube {...props} />} /> */}
         <About id="about" CubeComponent={(props) => <Cube {...props} />} />
         <About2 CubeComponent={(props) => <Cube {...props} />} />
-        <Portfolio
+        {/* <Portfolio
           CubeComponent={(props) => <Cube {...props} />}
           id="portfolio"
           type={"web"}
         />
-        {/* <Portfolio type={"mobile"}></Portfolio> */}
-        {/* <Services id="services"></Services> */}
+        <Portfolio type={"mobile"}></Portfolio> */}
+        {/* <Services id="services"></Services>
         {servicesdata.map((service) => (
           <ServicesInfo service={service} />
-        ))}
+        ))} */}
         <Contact id="contact" />
         <Footer id="footer" />
       </ControlledFlow>

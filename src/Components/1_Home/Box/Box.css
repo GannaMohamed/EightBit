@@ -4,16 +4,16 @@
   z-index: -1;
 }
 .box {
-    --box-width: 25vw;
+    --box-width: 23vw;
   max-width: var(--box-width);
   color: #ffffff;
   position: relative;
-  top: 25vh;
-  font-size: 1.1vw;
+  top: 20vh;
+  font-size: 1.2vw;
 }
 
 .vector {
-  width: 18.115vw
+  width: 20vw
 }
 
 .vectorContainer.left {
