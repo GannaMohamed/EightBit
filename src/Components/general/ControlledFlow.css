@@ -1,6 +1,9 @@
 /* LAYOUT */
-.ControlledFlow {
+:root {
     --ControlledFlowHeight: 90vh;
+
+}
+.ControlledFlow {
     position: fixed;
     top: 10vh;
     height: var(--ControlledFlowHeight);

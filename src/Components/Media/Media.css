@@ -1,9 +1,11 @@
 .SocialMediaContainer {
-    min-width: 30%;    
+    min-width: 30%;
+    justify-content: end;
+    gap: 30px;
 }
 
 .SocialMediaIcon {
- width: clamp(20px, 1.5vw, 50px);    /* transition: all 0.4s ease; */
+    width: clamp(20px, 1.5vw, 50px);    /* transition: all 0.4s ease; */
     transition: filter 0.4s ease; 
 }
 
@@ -34,4 +36,10 @@
 
 .WhiteMedia {
     filter: var(--mediaWhiteFilter);
+}
+
+@media (max-width: 768px) {
+  .SocialMediaContainer {
+    justify-content: center;
+  }
 }

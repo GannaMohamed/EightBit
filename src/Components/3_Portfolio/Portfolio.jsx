@@ -7,7 +7,7 @@ import MobVector from "../../Assets/MobVector.svg";
 import "./Portfolio.css";
 
 const Title = styled.h2`
-  font-size: 6vw;
+  ${"" /* font-size: 6vw; */}
   letter-spacing: 1.481vw;
   ${
     "" /* position: relative;
@@ -22,16 +22,20 @@ const Title = styled.h2`
 export default function Portfolio({ className, type, CubeComponent }) {
   return (
     <div className={`PortfolioPage col ${className}`}>
-      <div className={`col`}>
+      <div className={`PortfolioPageContainer col`}>
         {/* Title Section */}
-        <div className="d-flex align-items-start/">
+        <div className="d-flex align-items-start">
           <Title className="medium">Portfolio</Title>
-          <div className="d-flex align-items-start PortfolioCubeContainer">
+          <div className="PortfolioCubeContainer d-flex align-items-start">
             {/* <img className="WebVector" src={WebVector} alt="Dashed Lines" /> */}
-            <img className="WebVector" src={MobVector} alt="Dashed Lines" />
+            <img
+              className="WebVector "
+              src={type === "web" ? WebVector : MobVector}
+              alt="Dashed Lines"
+            />
             {/* <Cube moveElement={4} Width="" /> */}
             <CubeComponent
-              Width="13.693vw"
+              Width="14vw"
               className={`CubePortfolio`}
               moveElement={0}
             />

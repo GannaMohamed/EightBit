@@ -1,11 +1,10 @@
 import React from "react";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis"; // Make sure these are installed
+// import { ReactLenis, useLenis } from "@studio-freight/react-lenis"; // Make sure these are installed
 import "./ControlledFlow.css";
-import { useRef, useEffect, useState } from "react";
-import Footer from "../6_Footer/Footer";
-import { ScrollContainer, ScrollPage, Animator } from "react-scroll-motion";
-import { cancelFrame, frame } from "framer-motion";
-import gsap from "gsap/all";
+import { useRef, useEffect} from "react";
+// import { ScrollContainer, ScrollPage, Animator } from "react-scroll-motion";
+// import { cancelFrame, frame } from "framer-motion";
+// import gsap from "gsap/all";
 
 export default function ControlledFlow({ children, className }) {
   const sectionsRef = useRef([]);

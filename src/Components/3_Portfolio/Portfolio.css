@@ -1,9 +1,39 @@
+:root {
+  --LaptopWidth: 25vw;
+  --KeyboardWidth: calc(var(--LaptopWidth) + 10vw);
+}
+
+@media (max-aspect-ratio: 1.75/1) {
+  :root {
+    --LaptopWidth: 35vw;
+  }
+}
+.LaptopContainer {
+    width: var(--LaptopWidth);
+}
+.Keyboard {
+    width: var(--KeyboardWidth);
+}
+.MobileContainer {
+    width: 20vw;
+    height: 40vw;
+}
+
 .PortfolioPage {
-    /* margin: 0 3vw; */
+    height: 90vh; /* this is the default but somehow it doesn't respond */
 }
 
 .WebVector {
-    width: 37.426vw;
+    width: 40vw;
+}
+
+.PortfolioPageContainer {
+    justify-content: space-between;
+}
+
+.PortfolioContentContainer {
+    display: flex;
+    align-items: start;
 }
 
 .PortfolioCubeContainer {
@@ -15,19 +45,26 @@
 .SeeMore {
     color: var(--Lavender-Blue, #E0E5F3);
     font-family: "Anek Bangla";
-    font-size: 1.7vw;
-    line-height: 2.3vw;
+    /* font-size: 1.7vw; */
+    /* line-height: 2.3vw; */
     border: unset;
-    padding: 0.231vw 0.926vw;
-    border-radius: 0.579vw;
+    padding: clamp(5px, 0.3vw, 10px) clamp(10px, 1vw, 20px);
+    border-radius: clamp(5px, 1vw, 20px);
     background: var(--linear-2, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
 }
 
-.webTemplate {
-    width: 40vw;
-    position: relative;
-    bottom: 7vw;
+.SeeMoreH6 {
+    letter-spacing: unset;
+    margin: unset;
 }
+
+.WebTemplate {
+    width: 48vw;
+    /* width: 40vw; */
+    /* position: relative; */
+    /* bottom: 7vw; */
+}
+
 .WebExampleImg {
     position: absolute;
     transform: rotate(-15deg);
@@ -35,7 +72,8 @@
     left: 0;
 }
 
-.TempContainer > * {
+
+.MobileContainer > * {
     width: inherit;
     height: inherit;
 }
@@ -48,4 +86,48 @@
 
 .Keyboard > *, .Screen > * {
     position:absolute;
+}
+
+@media (min-width: 1200px) {
+    .Platform {
+    /* position: relative; */
+    /* bottom: ; */
+    }
+}
+
+@media (max-aspect-ratio: 1.75/1) {
+    .PortfolioPageContainer {
+        justify-content: unset;
+    }
+
+    .PortfolioContentContainer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: unset !important;
+        justify-content: space-between;
+    }
+
+    .PortfolioContent {
+        width: 80% !important;
+    }
+    .WebTemplate {
+        width: 80vw;
+    }
+    .LaptopContainer {
+        width: 35vw;
+    }
+    .MobileContainer {
+        bottom: unset !important;
+        left: unset !important;
+        width: 30vw;
+        height: 60vw;
+    }
+    
+}
+
+@media (max-width: 600px) {
+ .WebVector {
+    width: 35vw;
+ }   
 }

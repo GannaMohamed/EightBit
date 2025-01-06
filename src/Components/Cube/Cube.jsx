@@ -1,7 +1,6 @@
 import React from "react";
 import "./Cube.css";
 import styled from "styled-components";
-import { Animator } from "react-scroll-motion";
 
 const CubeElement1 = ({ className }) => {
   return (

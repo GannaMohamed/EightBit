@@ -29,7 +29,7 @@ export default function Contact() {
     <div className="ContactPageContainer centered">
       <SplitScreen className="ContactPageSplitScreen">
         <div>
-          <h1 className="ContactHeading">Contact</h1>
+          <h2 className="ContactHeading">Contact</h2>
         </div>
         <div className="FormContainer">
           <form>

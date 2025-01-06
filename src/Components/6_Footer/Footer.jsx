@@ -22,25 +22,29 @@ export default function Footer() {
       </div>
       <div className="BlueFooterContainer flex-grow-1">
         <div className="BlueFooter col justify-content-around align-items-center py-1">
-          {/* <Grid item spacing={4}> */}
           <div>
-            <Grid item xs={12} className="centered">
+            <Grid
+              item
+              xs={12}
+              // className="centered"
+            >
               <img className="LogoWhite" src={LogoWhite} alt="Logo" />
             </Grid>
           </div>
           {/* Dynamic Footer Columns */}
           <div>
-            <Grid item container xs={12} className="FooterColumns">
+            <Grid container spacing={4}>
               {footerContent.map((section, index) => (
                 <Grid
-                  container // Use the container prop
+                  container
+                  item
                   xs={12}
                   md={4}
-                  spacing={2}
                   key={index}
-                  className="Grid col"
+                  className="FooterColumn"
                   justifyContent="center" // Center horizontally
                   alignItems="center" // Center vertically
+                  direction="column" // Default direction
                 >
                   <h6 className="FooterHeading text-uppercase">
                     {section.heading}
@@ -58,7 +62,11 @@ export default function Footer() {
           {/* Media */}
           <div className="w-100 px-5">
             <hr className="WhiteHR" />
-            <Grid item xs={12} className="d-flex justify-content-between py-2">
+            <Grid
+              item
+              xs={12}
+              className="CopyRightsContainer d-flex justify-content-between py-2"
+            >
               <p className="CopyRights text-uppercase">
                 © 2024 8-Bit Solutions. All Rights Reserved.
               </p>

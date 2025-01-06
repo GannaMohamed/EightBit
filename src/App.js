@@ -61,7 +61,11 @@ function App() {
           id="portfolio"
           type={"web"}
         />
-        {/* <Portfolio type={"mobile"}></Portfolio> */}
+        <Portfolio
+          CubeComponent={(props) => <Cube {...props} />}
+          id="portfolioMobile"
+          type={"mobile"}
+        ></Portfolio>
         {/* <Services id="services"></Services> */}
         {servicesdata.map((service) => (
           <ServicesInfo service={service} />

@@ -4,8 +4,6 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  width: 20vw;
-  height: 40vw;
   left: 15vw;
   bottom: 8vw;
 `;
@@ -19,7 +17,7 @@ const Example = styled.img`
 
 export default function MobTemplate({ className, img }) {
   return (
-    <Container className="TempContainer">
+    <Container className={`${className}`}>
       <Example src={img} className="example" alt="Mobile App" />
       <img src={mobile} alt="Mobile Portfolio" />
     </Container>

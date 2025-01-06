@@ -29,11 +29,12 @@
     /* font-size: 1.2vw;  */
     line-height: 1.2vw;
     letter-spacing: 0.2vw;
+    white-space: nowrap;
 }
 
 .Grid > * {
-    width: 100%;
-}
+    width: 100%; 
+} 
 
 .LogoWhite {
     height: 9vh;
@@ -45,12 +46,13 @@
     line-height: 2.5vw;
 }
 
+
 .FooterContent {
     font-weight: var(--regular); 
 }
 
 .FooterContent > * {
-   font-size: clamp(0.8rem, 1.2vw, 2.3rem); 
+   font-size: clamp(1rem, 1.3vw, 2.3rem); 
     margin: unset;
 }
 
@@ -68,6 +70,23 @@
         display: none;
     }
     .BlueFooter {
-        height: 100vh;
+        height: 85vh;
     }
+    .FooterColumn {
+        width: 100%;
+        gap: 1vh !important;
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+   }
+  .FooterContent {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: center; /* Center content horizontally */
+        gap: 1rem;
+  }
+  .CopyRightsContainer {
+    flex-direction: column;
+  }
+
  }
