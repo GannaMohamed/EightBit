@@ -4,7 +4,7 @@ import arrow from "../../Assets/arrow.svg";
 import "./Services.css";
 import styled from "styled-components";
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   font-size: 7.407vw;
   letter-spacing: 1.481vw;
   background: linear-gradient(180deg, #052453 20.5%, #fff 188%);
@@ -16,15 +16,16 @@ const Heading = styled.h1`
 export default function ServicesInfo({ service }) {
   return (
     <div
-      id={service.index === "01" ? "services" : undefined}
-      className="ServicesInfo d-flex col centered"
+      id={service.index === "01" && "services"}
+      className="ServicesInfo col justify-content-center"
     >
-      {service.index === "01" && (
-        <div className="w-100">
-          <Heading>Services</Heading>
-        </div>
-      )}
-
+      <>
+        {service.index === "01" && (
+          <div className="w-100">
+            <Heading>Services</Heading>
+          </div>
+        )}
+      </>
       <SplitScreen firstWidth={1} secondWidth={3}>
         <div className="position-relative" style={{ height: "fit-content" }}>
           <div className="NumberSquare position-absolute"></div>
@@ -33,7 +34,7 @@ export default function ServicesInfo({ service }) {
           </div>
         </div>
         <div>
-          <h2 className="Head">{service.head}</h2>
+          <h3 className="Head">{service.head}</h3>
           <div className="Body">{service.body}</div>
           <div className="ReadMore d-flex justify-content-between">
             <div className="ReadMoreText">Read More</div>

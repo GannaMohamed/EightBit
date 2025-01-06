@@ -1,5 +1,5 @@
 .ContactHeading {
-    font-size: 6vw;
+    font-size: clamp(3rem, 6vw, 10rem);
     font-weight: var(--medium);
     letter-spacing: 1.481vw;
     background: linear-gradient(180deg, #052453 20.5%, #FFF 188%);
@@ -9,7 +9,6 @@
 }
 
 .FormHeading {
-    font-size: 2.5vw;
     text-align: center;
     font-weight: var(--medium);
     letter-spacing: 0.33vw;
@@ -22,7 +21,7 @@
 
 /* Text Fields */
 .css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root, .css-zsp0bh-MuiInputBase-root-MuiOutlinedInput-root {
-    border-radius: 0.5vw !important;
+    border-radius: 7px !important;
     border: 0.09vw solid var(--linear-1, #0140A0);
     padding: unset !important;
     height: var(--inputHeight);
@@ -34,8 +33,8 @@
 }
 
 .FormContainer label {
-    font-size: 1.1vw;
-    letter-spacing: 0.165vw;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    letter-spacing: 0.1vw;
     font-weight: var(--semibold);
     background: var(--linear1, linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
     background-clip: text;
@@ -49,3 +48,29 @@
     border-color: var(--selected-color)
 }
 
+.error, .css-er619e-MuiFormHelperText-root.Mui-error {
+    color: var(--error) !important;
+    font-weight: var(--semibold);
+    margin: unset;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    letter-spacing: unset;
+}
+
+
+ /* @media (min-width: 1000px) {
+    .ContactPageSplitScreen:nth-child(1) {
+        flex-grow: unset;
+    }
+
+  } */
+
+ @media (max-width: 920px) {
+    .ContactPageSplitScreen {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .FormHeading {
+        display: none;
+    }
+  }

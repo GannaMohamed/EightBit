@@ -2,6 +2,7 @@
     --oxfordBlue: #062453;
     --lavenderBlue: #E0E5F3;
     --brightBlue: #768FC8;
+    --error: #b81c1c;
     --linear1: linear-gradient(180deg, #0140A0 0%, #00173A 100%);
     --linear2: linear-gradient(180deg, #0140A0 0%, #00173A 100%);
     --linear3: linear-gradient(180deg, #052453 20%, #FFFFFF 150%);
@@ -119,9 +120,8 @@
 .Button {
   --linear-gradient: linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%);
   --text-gradient: linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%);
-  padding: 0rem 1.8rem;
-  height: var(--inputHeight);
-  font-size: clamp(1.1rem, 1.3rem ,1.5rem);
+  padding: 0rem 1.8rem; /* Default padding for larger screens */
+  font-size: clamp(1.1rem, 1.3rem, 1.5rem);
   font-weight: var(--medium);
   border-radius: 0.5rem;
   border: 0.1rem solid var(--linear-1, #0140A0);
@@ -130,7 +130,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
-  /* transition: all 0.3s ease; */
   text-align: center;
+  line-height: 1.5; /* Consistent line height */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .Button {
+    padding: 0rem 1.2rem; /* Smaller padding for mobile */
+  }
 }
 

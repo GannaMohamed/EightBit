@@ -7,11 +7,8 @@
 }
 .Page {
     height: var(--ControlledFlowHeight);
+    padding: 0vw 3vw;
 }
-
-
-
-
 
 /* SCROLL EFFECT */
 .ControlledFlow {
@@ -28,6 +25,7 @@
   transform: translateY(0);
   transition: opacity 0.4s ease-in-out;
   scroll-snap-align: start; 
+
 }
 .Page.fade-up {
   opacity: 0;
@@ -53,7 +51,7 @@
 
 @media (max-width: 950px) {
     .ControlledFlow {
-      top: 7vh
+      /* top: 7vh; */ /* DONT REMEMBER WHY I PUT THIS */
     }
 }
 

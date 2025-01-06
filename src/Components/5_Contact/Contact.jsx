@@ -26,16 +26,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="centered ">
-      <SplitScreen>
-        <h1 className="ContactHeading">Contact</h1>
+    <div className="ContactPageContainer centered">
+      <SplitScreen className="ContactPageSplitScreen">
+        <div>
+          <h1 className="ContactHeading">Contact</h1>
+        </div>
         <div className="FormContainer">
           <form>
-            <h2 className="FormHeading">Get In Touch</h2>
+            <h4 className="FormHeading">Get In Touch</h4>
             <Form onSubmit={onSubmit} />
           </form>
         </div>
-      </SplitScreen>{" "}
+      </SplitScreen>
     </div>
   );
 }
@@ -93,7 +95,7 @@ export const Form = includeValidForm(
               </Grid>
 
               {/* Name field */}
-              <Grid item size={{ xs: 12, md: 6 }}>
+              <Grid item size={{ xs: 6, md: 6 }}>
                 <label htmlFor="NameInput">What’s Your Name?</label>
                 <TextField
                   fullWidth
@@ -101,13 +103,12 @@ export const Form = includeValidForm(
                   value={name}
                   onChange={(e) => onChangeData({ name: e.target.value })}
                   error={Boolean(errors.name)}
-                  ذ
                   helperText={errors.name}
                 />
               </Grid>
 
               {/* Email field */}
-              <Grid item size={{ xs: 12, md: 6 }}>
+              <Grid item size={{ xs: 6, md: 6 }}>
                 <label htmlFor="EmailInput">What’s Your Email?</label>
                 <TextField
                   fullWidth
@@ -120,7 +121,7 @@ export const Form = includeValidForm(
               </Grid>
 
               {/* Estimated Time field */}
-              <Grid item size={{ xs: 12, md: 6 }}>
+              <Grid item size={{ xs: 6, md: 6 }}>
                 <label htmlFor="EstimatedTimeInput">
                   What’s Your Timeline?
                 </label>
@@ -135,10 +136,8 @@ export const Form = includeValidForm(
               </Grid>
 
               {/* Budget field */}
-              <Grid item size={{ xs: 12, md: 6 }}>
-                <label htmlFor="BudgetInput">
-                  What’s Your Estimated Budget?
-                </label>
+              <Grid item size={{ xs: 6, md: 6 }}>
+                <label htmlFor="BudgetInput">What’s Your Budget?</label>
                 <TextField
                   fullWidth
                   id="BudgetInput"

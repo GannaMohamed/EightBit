@@ -1,45 +1,32 @@
-
-
 .NavLogo {
-  width: 5vw;
+  width: 4vw;
   z-index: 1;
 }
 
 .NavContainer {
-  /* position: fixed;
-  top: 0; */
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 5vw;
 }
 
-/* NavItem styling */
 .NavItem {
   position: relative;
   transition: color 0.5s ease, font-size 0.5s ease !important;
 }
-
-/* Remove any default underline from anchor elements */
 .NavItem > * {
-  /* font-size: 1.3vw; */
   color: var(--brightBlue) !important;
-  text-decoration: none !important; /* Remove default underline */
+  text-decoration: none !important;
   transition: color 0.5s ease, font-size 0.5s ease !important;    
-  font-size: clamp(1.4rem, 1.7vw, 2.5rem);
+  font-size: clamp(1.2rem, 1.7vw, 2.5rem);
 }
-
- /* Active NavItem styling with transition on font size */
   .NavItem.active > * {
     color: var(--oxfordBlue) !important;
-      font-size: clamp(1.6rem, 1.9vw, 2.7rem);
-    /* font-size: 1.5vw; */
+      font-size: clamp(1.4rem, 1.9vw, 2.7rem);
   }
-
    .NavItem:hover > * {
     color: var(--oxfordBlue) !important;
-    font-size: clamp(1.6rem, 1.9vw, 2.7rem);
-    /* font-size: 1.5vw; */
+    font-size: clamp(1.4rem, 1.9vw, 2.7rem);
   }
  .NavItem:after {
     content: '';
@@ -61,6 +48,9 @@
 }
 
 @media (max-width: 768px) {
+  .NavLogo {
+  width: 6vw;
+}
   .BurgerMenu {
   display: block;
 }

@@ -53,19 +53,19 @@ function App() {
         className="ControlledFlow"
         // onCubeTransform={handleCubeTransform}
       >
-        {/* <Home id="home" CubeComponent={(props) => <Cube {...props} />} /> */}
+        <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
         <About id="about" CubeComponent={(props) => <Cube {...props} />} />
         <About2 CubeComponent={(props) => <Cube {...props} />} />
-        {/* <Portfolio
+        <Portfolio
           CubeComponent={(props) => <Cube {...props} />}
           id="portfolio"
           type={"web"}
         />
-        <Portfolio type={"mobile"}></Portfolio> */}
-        {/* <Services id="services"></Services>
+        {/* <Portfolio type={"mobile"}></Portfolio> */}
+        {/* <Services id="services"></Services> */}
         {servicesdata.map((service) => (
           <ServicesInfo service={service} />
-        ))} */}
+        ))}
         <Contact id="contact" />
         <Footer id="footer" />
       </ControlledFlow>

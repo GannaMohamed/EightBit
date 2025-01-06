@@ -1,7 +1,7 @@
 .FooterContainer {
     /* width: inherit; */
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     /* position: fixed;
     bottom: 0; */
     gap: 1vw;
@@ -17,7 +17,6 @@
     --footerTextColor: var(--Lavender-Blue, #E0E5F3);
     /* width: 100%; */
     gap: 4vh;
-    /* height: 50vh; */
     /* position: absolute; */
     /* bottom: 0; */
     border-radius: 50px 50px 0px 0px;
@@ -27,7 +26,7 @@
 /* Font Requirements */
 .BlueFooter > * {
     color: var(--footerTextColor);
-    font-size: 1.2vw; 
+    /* font-size: 1.2vw;  */
     line-height: 1.2vw;
     letter-spacing: 0.2vw;
 }
@@ -43,11 +42,16 @@
 
 .FooterHeading { 
     font-weight: var(--bold);
-    line-height: 3.2vw;
+    line-height: 2.5vw;
 }
 
 .FooterContent {
     font-weight: var(--regular); 
+}
+
+.FooterContent > * {
+   font-size: clamp(0.8rem, 1.2vw, 2.3rem); 
+    margin: unset;
 }
 
 .WhiteHR {
@@ -57,3 +61,13 @@
 .CopyRights {
     font-weight: var(--medium);
 }
+
+
+ @media (max-width: 768px) {
+    .FooterCubeContainer {
+        display: none;
+    }
+    .BlueFooter {
+        height: 100vh;
+    }
+ }

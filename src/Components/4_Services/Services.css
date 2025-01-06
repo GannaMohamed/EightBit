@@ -1,10 +1,10 @@
 .ServicesInfo {
   height: 90vh;
+  gap: 5rem;
 }
 
 .ServicesInfo .Head {
   font-weight: var(--semibold);
-  font-size: 3vw;
   letter-spacing: 0.37vw;
   background: var(
     --linear1,
@@ -16,19 +16,10 @@
 }
 
 .ServicesInfo .Body {
-  font-size: 1.9vw;
+  font-size: clamp(1.3rem, 1.7vw, 2.8rem); 
   letter-spacing: 0.231vw;
   font-weight: var(--medium);
-    background: var(
-    --linear1,
-    linear-gradient(120deg, #0140a0 31.58%, #00173a 121.41%)
-  ); 
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ServicesInfo .Body {
+  color: var(--oxfordBlue);  
   max-width: 90%;
 }
 
@@ -50,10 +41,10 @@
   -webkit-text-fill-color: transparent;
 }
 
-.ServicesInfo .ReadMore {
-  gap: 1.563vw;
+.ServicesInfo .ReadMore {  
+  font-size: clamp(1.3rem, 2.5vw, 6rem);
+  gap: 1.5vw;
   width: fit-content;
-  font-size: 2.3vw;
   background: var(--linear1, linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
   background-clip: text;
   -webkit-background-clip: text;
@@ -61,10 +52,8 @@
   /* display: inline-flex; */
   /* align-items: center; */
   /* position: relative; */
-
-  
 }
-/* General Text Styling */
+
 .ReadMoreText {
   font-weight: var(--semibold);
   letter-spacing: 4px; /* Default letter-spacing */

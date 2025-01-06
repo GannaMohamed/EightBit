@@ -1,5 +1,9 @@
-.Cube {
-    filter:drop-shadow( 0px 0px 100px  #0140A0);
+.Cube, shadow {
+    filter:drop-shadow( 0px 0px 50px  #0140A0);
+}
+
+.noShadow {
+    filter: unset;
 }
 
 .Cube > * {

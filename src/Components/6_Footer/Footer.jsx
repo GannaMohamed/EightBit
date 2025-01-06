@@ -8,12 +8,20 @@ import { footerContent } from "../../data";
 
 export default function Footer() {
   return (
-    <div className="FooterContainer col d-flex align-items-center justify-content-between">
-      <div className="centered flex-grow-1 pt-5">
+    <div
+      className="FooterContainer col align-items-center"
+      // justify-content-between
+    >
+      <div
+        className="FooterCubeContainer
+      "
+        // flex-grow-1
+        // pt-5
+      >
         <Cube hoverOneElement={true} Width="14vw" className={``} />
       </div>
-      <div className="BlueFooterContainer">
-        <div className="BlueFooter col justify-content-around align-items-center py-2">
+      <div className="BlueFooterContainer flex-grow-1">
+        <div className="BlueFooter col justify-content-around align-items-center py-1">
           {/* <Grid item spacing={4}> */}
           <div>
             <Grid item xs={12} className="centered">
@@ -34,9 +42,9 @@ export default function Footer() {
                   justifyContent="center" // Center horizontally
                   alignItems="center" // Center vertically
                 >
-                  <h4 className="FooterHeading text-uppercase">
+                  <h6 className="FooterHeading text-uppercase">
                     {section.heading}
-                  </h4>
+                  </h6>
                   <div className="FooterContent">
                     {section.items.map((item, i) => (
                       <p key={i}>{item}</p>
@@ -50,8 +58,8 @@ export default function Footer() {
           {/* Media */}
           <div className="w-100 px-5">
             <hr className="WhiteHR" />
-            <Grid item xs={12} className="d-flex justify-content-between py-3">
-              <p className="CopyRights text-uppercase ">
+            <Grid item xs={12} className="d-flex justify-content-between py-2">
+              <p className="CopyRights text-uppercase">
                 © 2024 8-Bit Solutions. All Rights Reserved.
               </p>
               <Media WhiteMedia={true} />

@@ -48,7 +48,7 @@ export default function About2({ CubeComponent }) {
           </BoxContent>
         </Box>
       </div>
-      <div className="w-100">
+      <div className="About2CubeContainer w-100">
         <CubeComponent
           Width="10vw"
           className={`CubeAbout2 float-right`}

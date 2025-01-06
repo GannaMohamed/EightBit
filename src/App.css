@@ -3,6 +3,10 @@
   font-family: var(--font-family);
 }
 
+button:focus, button:checked {
+    outline: unset !important;
+}
+
 *::selection {
   background-color: var(--oxfordBlue);
   color: var(--lavenderBlue);

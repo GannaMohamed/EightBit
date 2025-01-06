@@ -4,6 +4,7 @@ import "./SplitScreen.css";
 
 export default function SplitScreen({
   children,
+  className,
   firstWidth = 1,
   secondWidth = 1,
 }) {
@@ -15,7 +16,7 @@ export default function SplitScreen({
     flex: ${(p) => p.flex};
   `;
   return (
-    <Container className="SplitScreen">
+    <Container className={`SplitScreen ${className}`}>
       {/* problem flex=  [object object] */}
       <Panel flex={firstWidth}>{first}</Panel>
       <Panel flex={secondWidth}>{second}</Panel>
