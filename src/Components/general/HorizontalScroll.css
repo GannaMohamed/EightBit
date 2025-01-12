@@ -1,0 +1,38 @@
+.carousel {
+    height: inherit;
+}
+.contentContainer {
+    height: inherit;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    /* overflow-y: hidden; */
+}
+.components {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25vw;
+}
+
+.componentItem {
+    height: auto;
+    /* width: clamp(10rem, 90vw, 100rem); */
+}
+
+
+/**********************************************/
+
+.HorizontalScroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    transform: rotate(-90deg);
+}
+.HorizontalScroll > * {
+    width: 80vw;
+    transform: rotate(90deg);
+}
+

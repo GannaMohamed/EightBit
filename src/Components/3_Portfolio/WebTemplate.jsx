@@ -19,7 +19,8 @@ const Container = styled.div`
 `;
 const LaptopContainer = styled.div`
   position: relative;
-  top: 3vh;
+  bottom: 1vh;
+  ${"" /* top: 3vh; */}
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,13 +57,14 @@ const Shadow = styled.img`
   transform: rotate(15deg);
 `;
 const Platform = styled.img`
+  ${"" /* width: calc(100% - 5vw); */}
   width: calc(100% - 5vw);
-  ${"" /* position: relative; */}
-  ${"" /* bottom: 2vw; */}
+  position: relative;
+  bottom: 5vh;
   z-index: -1;
 `;
 
-export default function WebTemplate({ img, className }) {
+export default function WebTemplate({ img, className}) {
   return (
     <Container className={`${className}`}>
       <LaptopContainer className="LaptopContainer position-relative">

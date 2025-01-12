@@ -4,15 +4,20 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  left: 15vw;
-  bottom: 8vw;
+  ${"" /* left: 15vw; */}
+  ${"" /* bottom: 8vw; */}
+  ${"" /* bottom: 5vw; */}
 `;
 
 // const Template = styled.img``;
 
 const Example = styled.img`
-  padding: 1.5vw;
-  border-radius: 4vw;
+  ${"" /* padding: 1.5vw; */}
+  ${"" /* border-radius: 4vw; */}
+  position: absolute;
+
+  padding: 1vw;
+  border-radius: 3vw;
 `;
 
 export default function MobTemplate({ className, img }) {

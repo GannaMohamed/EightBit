@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import MobTemplate from "./MobTemplate";
 import WebTemplate from "./WebTemplate";
@@ -34,30 +34,55 @@ const ContentP = styled.p`
   }
 `;
 
-export default function PortfolioContent({ type }) {
+export default function PortfolioContent({ project, displayedType }) {
+  const {
+    name,
+    desription,
+    type,
+    keyFeatures,
+    technologies,
+    platform,
+    status,
+    isShown,
+    projectMedia,
+  } = project || {};
+
+  const shouldDisplayProject = displayedType === platform;
+
   return (
-    <div className="PortfolioContentContainer">
-      <Content className="PortfolioContent">
-        <ContentTitle className="bold">UI / UX for 8 A Web </ContentTitle>
-        <ContentP className="ContentP medium">
-          UI and UX design for a website inspired by 8-bit style , combining
-          retro graphics and modern interactivity to deliver a unique and
-          seamless visual experience to users.
-        </ContentP>
-        <div>
-          <button className="SeeMore semibold">
-            <h6 className="SeeMoreH6">See More</h6>
-          </button>
+    shouldDisplayProject && (
+      <div className="PortfolioContentContainer">
+        <Content className="PortfolioContent">
+          <ContentTitle className="bold">{name}</ContentTitle>
+          <div className="badge-container">
+            {/* {technologies.map((tech, index) => ( */}
+            <span className="badge">{technologies}</span>
+            {/* ))} */}
+          </div>
+          <ContentP className="ContentP medium">{desription}</ContentP>
+          <div>
+            <button className="SeeMore semibold">
+              <h6 className="SeeMoreH6">See More</h6>
+            </button>
+          </div>
+        </Content>
+        <div className="d-flex centered">
+          {platform === "web" && (
+            <WebTemplate
+              img={webexample}
+              projectMedia={projectMedia}
+              className="WebTemplate"
+            />
+          )}
+          {platform === "mobile" && (
+            <MobTemplate
+              img={mobexample}
+              projectMedia={projectMedia}
+              className="MobileContainer"
+            />
+          )}
         </div>
-      </Content>
-      <div className="d-flex centered">
-        {type === "web" && (
-          <WebTemplate img={webexample} className="WebTemplate" />
-        )}
-        {type === "mobile" && (
-          <MobTemplate img={mobexample} className="MobileContainer" />
-        )}
       </div>
-    </div>
+    )
   );
 }

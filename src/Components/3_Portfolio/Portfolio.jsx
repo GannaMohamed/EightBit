@@ -5,6 +5,10 @@ import styled from "styled-components";
 import WebVector from "../../Assets/WebVector.svg";
 import MobVector from "../../Assets/MobVector.svg";
 import "./Portfolio.css";
+import { ResourceLoader } from "../../Models/ResourceLoader";
+import { ArrayResourceLoader } from "../../Models/ArrayResourceLoader";
+import HorizontalScroll from "../general/HorizontalScroll";
+import { TestTemplate } from "../../Test";
 
 const Title = styled.h2`
   ${"" /* font-size: 6vw; */}
@@ -20,6 +24,9 @@ const Title = styled.h2`
 `;
 
 export default function Portfolio({ className, type, CubeComponent }) {
+  const handleWheelScroll = (e) => {
+    e.currentTarget.scrollLeft += e.deltaY; // Use vertical scroll input to scroll horizontally
+  };
   return (
     <div className={`PortfolioPage col ${className}`}>
       <div className={`PortfolioPageContainer col`}>
@@ -35,14 +42,23 @@ export default function Portfolio({ className, type, CubeComponent }) {
             />
             {/* <Cube moveElement={4} Width="" /> */}
             <CubeComponent
-              Width="14vw"
+              Width="10vw"
               className={`CubePortfolio`}
               moveElement={0}
             />
           </div>
         </div>
         {/* Content Section */}
-        <PortfolioContent type={type} />
+        {/* <HorizontalScroll> */}
+        <ArrayResourceLoader
+          resourceUrl={"/project"}
+          resourceName={"project"}
+          ItemComponent={TestTemplate}
+          className="horizontal-scroll-wrapper d-flex flex-nowrap"
+          style={{ gap: "20px" }}
+          onWheel={handleWheelScroll}
+        ></ArrayResourceLoader>
+        {/* </HorizontalScroll> */}
       </div>
     </div>
   );

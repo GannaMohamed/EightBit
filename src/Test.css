@@ -1,0 +1,13 @@
+.horizontal-scroll-wrapper {
+  height: 80vh;
+  width: 100vw;
+  overflow-x: auto;
+scroll-behavior: revert;
+  scroll-padding-right: 5vw;
+
+}
+
+
+.horizontal-scroll-wrapper > div {
+  width: inherit;
+}

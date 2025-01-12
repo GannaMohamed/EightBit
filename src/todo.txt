@@ -3,12 +3,16 @@ RESPONSIVE
 [o] horizontal layouting (lining with navbar)
 [o] fix services scroll
 [o] font mediaquery
-[] reponsive split
+[o] reponsive split
 [] lines from the square
-[] heights/widths mediaquery (mobile or web's thing)
+[o] heights/widths mediaquery (mobile or web's thing)
 [o] limit maximum page stretching
 
 SCROLL
+[] horizontal scroll
+    [] react router dom
+    [] test page
+    [] try horizontal scroll there
 [] cube transition among pages
 
 https://www.youtube.com/watch?v=85xAWEnG_gg

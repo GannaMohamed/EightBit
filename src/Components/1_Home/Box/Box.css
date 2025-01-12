@@ -1,6 +1,6 @@
 .HomeContent {
-  gap: 15vw;
-  top: 27vh;
+  gap: 20vw;
+  top: 20vh;
   z-index: -1;
 }
 .box {
@@ -9,7 +9,17 @@
   color: #ffffff;
   position: relative;
   top: 20vh;
-  font-size: 1.2vw;
+  font-size: clamp(1rem, 1.1vw, 1.5rem); 
+}
+
+.LeftBox {
+  position: relative;
+  right: 7vw;
+}
+
+.RightBox {
+  position: relative;
+  left: 7vw;
 }
 
 .vector {
@@ -17,10 +27,12 @@
 }
 
 .vectorContainer.left {
-    left: calc(var(--box-width) / 2);
+    /* left: calc(var(--box-width) / 2); */
+    left: 5vw;
 }
 
 .vectorContainer.right {
+  right:2vw;
 }
 
 

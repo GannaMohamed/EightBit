@@ -1,8 +1,14 @@
 import axios from "axios";
 
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = process.env.REACT_APP_URL;
 
 export const fetchData = async (url) => {
-  const response = await axios.get(url);
-  return response.data;
+  try {
+    const response = await axios.get(url);
+    console.log(response.data);
+
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching data:", error.message || error);
+  }
 };

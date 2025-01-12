@@ -2,19 +2,14 @@ import "./App.css";
 import "./Utils/style.css";
 import "./Utils/fonts.css";
 
-import Navbar from "./Components/Navbar/Navbar";
-import ControlledFlow from "./Components/general/ControlledFlow";
-import Home from "./Components/1_Home/Home";
-import About from "./Components/2_About/About";
-import About2 from "./Components/2_About/About2";
-import Portfolio from "./Components/3_Portfolio/Portfolio";
-import Contact from "./Components/5_Contact/Contact";
-import Cube from "./Components/Cube/Cube";
-import { servicesdata } from "./data";
-import ServicesInfo from "./Components/4_Services/ServicesInfo";
-import Footer from "./Components/6_Footer/Footer";
 import { useEffect } from "react";
 import { throttle } from "lodash";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AppContainer from "./AppContainer";
+import Test from "./Test";
+import Navbar from "./Components/Navbar/Navbar";
+import { ResourceLoader } from "./Models/ResourceLoader";
+// import { GetAllProjects } from "./Models/ProjectModel";
 
 function App() {
   // const [cubeStyle, setCubeStyle] = useState({});
@@ -39,42 +34,29 @@ function App() {
 
   // const FadeUp = batch(Fade(), Move(), Sticky());
 
+  // useEffect(() => {
+  //   GetAllProjects();
+  // });
+
   return (
-    <div className="App">
-      <div className="Background">
-        <div className="GradientContainer">
-          <div className="ellipse ellipse1"></div>
-          <div className="ellipse ellipse2 "></div>
+    <BrowserRouter>
+      <div className="App">
+        <div className="Background">
+          <div className="GradientContainer">
+            <div className="ellipse ellipse1"></div>
+            <div className="ellipse ellipse2 "></div>
+          </div>
         </div>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<AppContainer title="8 Bit" />} />
+          <Route path="/test" element={<Test />} />
+          {/* <Route path="*" element={<PageNotFound title="404" />} /> */}
+        </Routes>
+        {/* </ScrollContainer> */}
+        {/* <AppContainer /> */}
       </div>
-      <Navbar />
-      {/* <ScrollContainer> */}
-      <ControlledFlow
-        className="ControlledFlow"
-        // onCubeTransform={handleCubeTransform}
-      >
-        <Home id="home" CubeComponent={(props) => <Cube {...props} />} />
-        <About id="about" CubeComponent={(props) => <Cube {...props} />} />
-        <About2 CubeComponent={(props) => <Cube {...props} />} />
-        <Portfolio
-          CubeComponent={(props) => <Cube {...props} />}
-          id="portfolio"
-          type={"web"}
-        />
-        <Portfolio
-          CubeComponent={(props) => <Cube {...props} />}
-          id="portfolioMobile"
-          type={"mobile"}
-        ></Portfolio>
-        {/* <Services id="services"></Services> */}
-        {servicesdata.map((service) => (
-          <ServicesInfo service={service} />
-        ))}
-        <Contact id="contact" />
-        <Footer id="footer" />
-      </ControlledFlow>
-      {/* </ScrollContainer> */}
-    </div>
+    </BrowserRouter>
   );
 }
 

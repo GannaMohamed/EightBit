@@ -15,8 +15,8 @@
     width: var(--KeyboardWidth);
 }
 .MobileContainer {
-    width: 20vw;
-    height: 40vw;
+    width: 15vw;
+    height: 30vw;
 }
 
 .PortfolioPage {
@@ -24,7 +24,7 @@
 }
 
 .WebVector {
-    width: 40vw;
+    width: 43vw;
 }
 
 .PortfolioPageContainer {
@@ -38,8 +38,9 @@
 
 .PortfolioCubeContainer {
     position: relative;
-    top: 4vw;
-    right: 1vw;
+    top: 3vw;
+    /* top: 4vw; */
+    /* right: 0vw; */
 }
 
 .SeeMore {
@@ -85,7 +86,7 @@
 }
 
 .Keyboard > *, .Screen > * {
-    position:absolute;
+    position: absolute;
 }
 
 @media (min-width: 1200px) {
@@ -120,14 +121,38 @@
     .MobileContainer {
         bottom: unset !important;
         left: unset !important;
-        width: 30vw;
-        height: 60vw;
+        width: 20vw;
+        height: 40vw;
     }
-    
 }
 
 @media (max-width: 600px) {
  .WebVector {
     width: 35vw;
  }   
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Space between badges */
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--oxfordBlue);
+  background-color: transparent;
+  border: 1px solid var(--oxfordBlue);
+  border-radius: 50px; /* Rounded corners */
+  text-transform: capitalize; /* Capitalize first letter */
+  cursor: default; /* Optional: Avoid pointer cursor */
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background-color: var(--oxfordBlue);
+  color: #fff; /* Contrast color for text */
 }
