@@ -33,20 +33,21 @@ export default function Footer() {
           </div>
           {/* Dynamic Footer Columns */}
           <div>
-            <Grid container spacing={4}>
+            <Grid container spacing={5}>
               {footerContent.map((section, index) => (
                 <Grid
                   container
                   item
                   xs={12}
                   md={4}
+                  rowSpacing={0}
                   key={index}
                   className="FooterColumn"
-                  justifyContent="center" // Center horizontally
-                  alignItems="center" // Center vertically
+                  // justifyContent="center" // Center horizontally
+                  // alignItems="center" // Center vertically
                   direction="column" // Default direction
                 >
-                  <h6 className="FooterHeading text-uppercase">
+                  <h6 className="FooterHeading text-uppercase ">
                     {section.heading}
                   </h6>
                   <div className="FooterContent">

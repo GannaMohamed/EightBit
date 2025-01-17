@@ -23,13 +23,13 @@ export default function AppContainer() {
       <Portfolio
         CubeComponent={(props) => <Cube {...props} />}
         id="portfolio"
-        type={"web"}
+        // type={"web"}
       />
-      <Portfolio
+      {/* <Portfolio
         CubeComponent={(props) => <Cube {...props} />}
         id="portfolioMobile"
         type={"mobile"}
-      ></Portfolio>
+      ></Portfolio> */}
       {/* <Services id="services"></Services> */}
       {servicesdata.map((service) => (
         <ServicesInfo service={service} />

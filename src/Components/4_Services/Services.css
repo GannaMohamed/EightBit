@@ -1,10 +1,10 @@
 .ServicesInfo {
   height: 90vh;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .ServicesInfo .Head {
-  font-weight: var(--semibold);
+  font-weight: var(--bold);
   letter-spacing: 0.37vw;
   background: var(
     --linear1,
@@ -16,11 +16,11 @@
 }
 
 .ServicesInfo .Body {
-  font-size: clamp(1.3rem, 1.7vw, 2.8rem); 
-  letter-spacing: 0.231vw;
-  font-weight: var(--medium);
+  font-size: clamp(1.3rem, 1.4vw, 2.8rem); 
+  letter-spacing: 0.1rem;
+  /* font-weight: var(--medium); */
   color: var(--oxfordBlue);  
-  max-width: 90%;
+  max-width: 80%;
 }
 
 .ServicesInfo .NumberSquare {
@@ -42,7 +42,7 @@
 }
 
 .ServicesInfo .ReadMore {  
-  font-size: clamp(1.3rem, 2.5vw, 6rem);
+  font-size: clamp(1.3rem, 2vw, 4rem);
   gap: 1.5vw;
   width: fit-content;
   background: var(--linear1, linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));

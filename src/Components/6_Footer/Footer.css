@@ -43,7 +43,7 @@
 
 .FooterHeading { 
     font-weight: var(--bold);
-    line-height: 2.5vw;
+    /* line-height: 2.5vw; */
 }
 
 
@@ -62,6 +62,7 @@
 
 .CopyRights {
     font-weight: var(--medium);
+    font-size: unset;
 }
 
 

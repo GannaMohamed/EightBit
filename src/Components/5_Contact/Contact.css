@@ -1,7 +1,7 @@
 .ContactHeading {
     font-size: clamp(3rem, 6vw, 10rem);
     font-weight: var(--medium);
-    letter-spacing: 1.481vw;
+    letter-spacing: 1.3vw;
     background: linear-gradient(180deg, #052453 20.5%, #FFF 188%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -11,8 +11,8 @@
 .FormHeading {
     text-align: center;
     font-weight: var(--medium);
-    letter-spacing: 0.33vw;
-    height: 4vw;
+    /* letter-spacing: 0.33vw; */
+    height: 3vw;
     background: var(--linear1, linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
     background-clip: text;
     -webkit-background-clip: text;
@@ -30,6 +30,24 @@
 /* Multiline Text Field */
 .css-zsp0bh-MuiInputBase-root-MuiOutlinedInput-root {    
     height: var(--inputHeight)*2;
+}
+
+/* Prevent default autofill styling */
+input:-webkit-autofill {
+  background-color: unset !important; /* Set your desired background color */
+  color: #000 !important;              /* Set your desired text color */
+  transition: background-color 5000s ease-in-out 0s; /* Prevent autofill flash */
+}
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: unset !important; /* Same for hover or focus states */
+  color: #000 !important;
+}
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill {
+  background-color: unset !important;
+  color: #000 !important;
 }
 
 .FormContainer label {

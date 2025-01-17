@@ -1,8 +1,8 @@
 .horizontal-scroll-wrapper {
-  height: 80vh;
+  height: fit-content;
   width: 100vw;
   overflow-x: auto;
-scroll-behavior: revert;
+  scroll-behavior: revert;
   scroll-padding-right: 5vw;
 
 }

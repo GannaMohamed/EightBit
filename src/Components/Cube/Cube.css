@@ -1,11 +1,10 @@
-.Cube, shadow {
+.Cube {
     filter:drop-shadow( 0px 0px 50px  #0140A0);
 }
 
 .noShadow {
     filter: unset;
 }
-
 .Cube > * {
     position: absolute;
     width: calc(50%); 

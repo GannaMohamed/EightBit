@@ -54,7 +54,7 @@ export default function Portfolio({ className, type, CubeComponent }) {
           resourceUrl={"/project"}
           resourceName={"project"}
           ItemComponent={TestTemplate}
-          className="horizontal-scroll-wrapper d-flex flex-nowrap"
+          className="horizontal-scroll-wrapper d-flex  flex-nowrap"
           style={{ gap: "20px" }}
           onWheel={handleWheelScroll}
         ></ArrayResourceLoader>

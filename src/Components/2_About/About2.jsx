@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Title = styled.h2`
+const Title = styled.h3`
   font-weight: var(--bold);
   background: var(
     --Linear-3,
@@ -16,10 +16,18 @@ const Box = styled.div``;
 
 const BoxTitle = styled.h5`
   font-weight: var(--semibold);
-  letter-spacing: 2.1px;
+  letter-spacing: 2.5px;
 `;
 
-const BoxContent = styled.p``;
+const BoxContent = styled.p`
+  font-size: clamp(1rem, 1.3vw, 2.3rem); /* Scales between ~10px and ~25px */
+  letter-spacing: clamp(
+    0.1rem,
+    0.145vw,
+    0.28rem
+  ); /* Scales between ~1px and ~2.8px */
+  line-height: 1.5; /* Retains 187.5% */
+`;
 
 export default function About2({ CubeComponent }) {
   return (
@@ -50,7 +58,7 @@ export default function About2({ CubeComponent }) {
       </div>
       <div className="About2CubeContainer w-100">
         <CubeComponent
-          Width="10vw"
+          Width="7vw"
           className={`CubeAbout2 float-right`}
           moveElement={0}
         />

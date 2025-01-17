@@ -23,6 +23,7 @@ export default function Home({ className, CubeComponent }) {
         handleMouseLeave={handleMouseLeave}
         Width="20vw"
         className={`CubeHome`}
+        shadow={true}
         move={move}
       >
         <Image className={`LogoOnCube ${move && "show"}`} src={Logomark} />

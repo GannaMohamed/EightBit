@@ -1,12 +1,11 @@
 .AboutContent {
-    gap: 2vh;
+    /* gap: 5vh; */
     flex-grow: 1;
 }
 
-.AboutContent > h2 { 
+.AboutContent > h3 { 
     color: var(--oxfordBlue);
     font-weight: var(--bold);
-
 }
 
 .AboutP1 {
@@ -14,7 +13,7 @@
 }
 
 .AboutP2 {
-  width: 75%;
+  width: 70%;
 }
 
 .CubeAbout {
@@ -26,7 +25,7 @@
 .AboutContent > p { 
     color: var(--oxfordBlue);
     font-weight: var(--medium);
-    line-height:187.5%;
+    /* line-height:187.5%; */
 }
 
 /* About 2 */
@@ -57,9 +56,9 @@
 /* Box Styles */
 .Box {
   /* width: 23vw; */
-  aspect-ratio: 1.5;
+  /* aspect-ratio: 1.5; */
   padding: 1.7vw 2.4vw;
-  margin: 2.3vw;
+  margin: 3vw;
   border-radius: 25px;
   text-align: center;
   color: var(--Lavender-Blue, #e0e5f3);
@@ -97,8 +96,8 @@
 
 .WhoVector {
     position: absolute;
-    top: 0;
-    right: 24vw;
+    top: -5vh;
+    right: 20vw;
 }
 
 .CubeAbout2 {

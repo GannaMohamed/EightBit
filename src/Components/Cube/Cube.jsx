@@ -534,6 +534,7 @@ export default function Cube({
   className,
   Width = "500px",
   children,
+  shadow,
   props,
   animation,
   move,
@@ -545,7 +546,7 @@ export default function Cube({
   return (
     // <Animator animation={animation?.animation}>
     <CubeContainer
-      className={`Cube  ${move && "move"} ${className}`}
+      className={`Cube ${!shadow && "noShadow"} ${move && "move"} ${className}`}
       cubeWidth={Width}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
