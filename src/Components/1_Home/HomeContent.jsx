@@ -3,21 +3,35 @@ import Box from "./Box/Box";
 
 export default function HomeContent({ show = "false" }) {
   return (
-    <div
-      className={`HomeContent position-absolute centered d-flex w-100 
+    <>
+      <div
+        className={`HomeContent position-absolute centered w-100 
        ${show ? "show" : ""}`}
-    >
-      <Box position="left">
-        We see a world where every business, no matter its size, can leverage
-        technology to streamline operations, engage customers more effectively,
-        and achieve lasting growth.
-      </Box>
-      <Box position="right">
-        At 8-Bit Solutions, security is a top priority. We ensure all our
-        solutions meet global compliance standards like GDPR, and we protect
-        your intellectual property with robust legal safeguards.
-      </Box>
-    </div>
+      >
+        <Box position="left">
+          We see a world where every business, no matter its size, can leverage
+          technology to streamline operations, engage customers more
+          effectively, and achieve lasting growth.
+        </Box>
+        <Box position="right">
+          At 8-Bit Solutions, security is a top priority. We ensure all our
+          solutions meet global compliance standards like GDPR, and we protect
+          your intellectual property with robust legal safeguards.
+        </Box>
+      </div>
+      <div className={`HomeContentMobile  ${show ? "show" : ""}`}>
+        <div className="HomeBoxMobile">
+          We see a world where every business, no matter its size, can leverage
+          technology to streamline operations, engage customers more
+          effectively, and achieve lasting growth.
+        </div>
+        <div className="HomeBoxMobile">
+          At 8-Bit Solutions, security is a top priority. We ensure all our
+          solutions meet global compliance standards like GDPR, and we protect
+          your intellectual property with robust legal safeguards.
+        </div>
+      </div>
+    </>
   );
 }
 

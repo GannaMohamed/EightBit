@@ -5,7 +5,7 @@ axios.defaults.baseURL = process.env.REACT_APP_URL;
 export const fetchData = async (url) => {
   try {
     const response = await axios.get(url);
-    console.log(response.data);
+    // console.log(response.data);
 
     return response.data;
   } catch (error) {

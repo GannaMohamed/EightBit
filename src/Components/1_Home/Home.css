@@ -1,3 +1,4 @@
+
 .HomeTitle {
     font-size: 24vw;
     background: linear-gradient(180deg, #052453 20.5%, #FFF 188%);
@@ -6,6 +7,11 @@
     -webkit-text-fill-color: transparent;
     /* font-size: 260px; */
 } 
+
+.HomeContentMobile {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
 .CubeHome {
   top: -5%;
@@ -50,3 +56,27 @@
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .HomeTitle {
+    bottom: 2vh;
+  }
+  .CubeHome {
+    width: 40vw !important;
+    height: 40vw !important;
+    top: 2vh;
+  }
+  .HomeContent {
+    display: none !important;
+  }
+  .HomeContentMobile.show {
+    opacity: 1;
+  }
+  .HomeBoxMobile {
+    width: 80%;
+    margin: auto;
+    font-weight: var(--medium);
+    color: var(--oxfordBlue);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

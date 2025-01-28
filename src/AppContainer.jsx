@@ -32,9 +32,12 @@ export default function AppContainer() {
       ></Portfolio> */}
       {/* <Services id="services"></Services> */}
       {servicesdata.map((service) => (
-        <ServicesInfo service={service} />
+        <ServicesInfo
+          service={service}
+          CubeComponent={(props) => <Cube {...props} />}
+        />
       ))}
-      <Contact id="contact" />
+      <Contact id="contact" CubeComponent={(props) => <Cube {...props} />} />
       <Footer id="footer" />
     </ControlledFlow>
   );

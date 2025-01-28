@@ -1,3 +1,11 @@
+.CubeServices {
+  transform: rotate(-40deg);
+}
+.Services2Header {
+  right: 15vw;
+  top: -5vh;
+}
+
 .ServicesInfo {
   height: 90vh;
   gap: 2rem;

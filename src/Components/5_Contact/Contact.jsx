@@ -6,8 +6,9 @@ import Grid from "@mui/material/Grid2";
 import { includeValidForm } from "./includeValidForm";
 import "./Contact.css";
 import Media from "../Media/Media";
+import Vector from "../../Assets/ContactVector.svg";
 
-export default function Contact() {
+export default function Contact({ CubeComponent }) {
   // const [selectedOptions, setSelectedOptions] = useState([]);
   // const handleOptionClick = (value) => {
   //   if (selectedOptions.includes(value)) {
@@ -27,11 +28,24 @@ export default function Contact() {
 
   return (
     <div className="ContactPageContainer centered">
-      <SplitScreen className="ContactPageSplitScreen">
+      <SplitScreen className="ContactPageSplitScreen centered">
         <div>
           <h2 className="ContactHeading">Contact</h2>
+          <img
+            style={{ height: "45vh" }}
+            src={Vector}
+            alt="Contact Dashed Lines"
+            className="ContactVector"
+          />
+          <div className="CubeContactContainer">
+            <CubeComponent
+              Width="10vw"
+              className={`CubeContact`}
+              moveElement={1}
+            />
+          </div>
         </div>
-        <div className="FormContainer">
+        <div className="FormContainer col">
           <form>
             <h4 className="FormHeading">Get In Touch</h4>
             <Form onSubmit={onSubmit} />
@@ -173,7 +187,7 @@ export const Form = includeValidForm(
 
           <div className="centered">
             <button
-              className={`Submit Button my-4 ${isSubmitted ? "Submitted" : ""}`}
+              className={`Submit Button my-3 ${isSubmitted ? "Submitted" : ""}`}
               type="submit"
               disabled={!isValid}
             >

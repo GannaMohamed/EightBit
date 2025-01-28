@@ -79,6 +79,9 @@
         /* display: flex; */
         /* flex-wrap: wrap; */
    }
+   .FooterHeading  {
+    text-align: center;
+   }
   .FooterContent {
         display: flex;
         flex-direction: row;

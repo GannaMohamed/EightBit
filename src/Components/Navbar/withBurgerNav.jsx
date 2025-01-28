@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const BurgerMenu = styled.div`
-  
-`;
+const BurgerMenu = styled.div``;
 
 const mobileBreakpoint = 768;
 

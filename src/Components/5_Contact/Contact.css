@@ -6,6 +6,23 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    position: relative;
+    top: 5vh;
+    left: 5vh;
+}
+
+.CubeContact {
+    transform: rotate(40deg);
+}
+
+.CubeContactContainer {
+    position: relative;
+    left: 6vw;
+}
+
+.ContactVector {
+  
 }
 
 .FormHeading {
@@ -50,8 +67,17 @@ select:-webkit-autofill {
   color: #000 !important;
 }
 
+.FormContainer {
+
+}
+
+.FormContainer > form {
+    /* width: 500px; */
+    max-width: 696.450px;
+}
+
 .FormContainer label {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1.1rem, 1.2vw, 1.5rem);
     letter-spacing: 0.1vw;
     font-weight: var(--semibold);
     background: var(--linear1, linear-gradient(120deg, #0140A0 31.58%, #00173A 121.41%));
@@ -70,7 +96,7 @@ select:-webkit-autofill {
     color: var(--error) !important;
     font-weight: var(--semibold);
     margin: unset;
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    font-size: clamp(0.8rem, 0.9vw, 1.2rem);
     letter-spacing: unset;
 }
 
@@ -88,7 +114,15 @@ select:-webkit-autofill {
         align-items: center;
     }
 
+    .ContactHeading {
+        position: unset;
+    }
+
     .FormHeading {
+        display: none;
+    }
+    
+    .ContactVector, .CubeContact {
         display: none;
     }
   }
@@ -101,8 +135,12 @@ select:-webkit-autofill {
         gap: 5vw;
     }
 
-    .FormContainer {
-        max-width: 696.450px;
-    }
+
 
   }
+
+/* @media (min-width: 1600px) and (min-height: 1000px) {
+  .FormContainer {
+    gap: 20px; // NOT WORKING ASLAN
+  }
+} */

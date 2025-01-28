@@ -18,7 +18,7 @@
   color: var(--brightBlue) !important;
   text-decoration: none !important;
   transition: color 0.5s ease, font-size 0.5s ease !important;    
-  font-size: clamp(1.2rem, 1.7vw, 2.5rem);
+  font-size: clamp(1.2rem, 1.7vw, 2.3rem);
 }
   .NavItem.active > * {
     color: var(--oxfordBlue) !important;
@@ -147,11 +147,18 @@
 
   &:hover:not(.active) {
     span:first-of-type {
-      width: 26px;
+      width: 26px ;
     }
 
     span:last-of-type {
       width: 12px;
+    }
+  }
+
+   .menu-icon__cheeckbox:checked + div {
+    span:first-of-type,
+    span:last-of-type {
+      width: 22px;
     }
   }
 

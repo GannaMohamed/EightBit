@@ -1,13 +1,15 @@
-import React from "react";
-import PortfolioContent from "./PortfolioContent";
+import React, { useRef } from "react";
+// import PortfolioContent from "./PortfolioContent";
 
 import styled from "styled-components";
 import WebVector from "../../Assets/WebVector.svg";
 import MobVector from "../../Assets/MobVector.svg";
 import "./Portfolio.css";
-import { ResourceLoader } from "../../Models/ResourceLoader";
+import { motion } from "motion/react";
+
+// import { ResourceLoader } from "../../Models/ResourceLoader";
 import { ArrayResourceLoader } from "../../Models/ArrayResourceLoader";
-import HorizontalScroll from "../general/HorizontalScroll";
+// import HorizontalScroll from "../general/HorizontalScroll";
 import { TestTemplate } from "../../Test";
 
 const Title = styled.h2`
@@ -24,6 +26,8 @@ const Title = styled.h2`
 `;
 
 export default function Portfolio({ className, type, CubeComponent }) {
+  const ref = useRef(null);
+
   const handleWheelScroll = (e) => {
     e.currentTarget.scrollLeft += e.deltaY; // Use vertical scroll input to scroll horizontally
   };
@@ -41,11 +45,18 @@ export default function Portfolio({ className, type, CubeComponent }) {
               alt="Dashed Lines"
             />
             {/* <Cube moveElement={4} Width="" /> */}
+            {/* <motion.div
+              ref={ref}
+              initial={{ x: -100, y: -500 }}
+              whileInView={{ x: 0, y: 0 }}
+              transition={{ duration: 1 }}
+            > */}
             <CubeComponent
               Width="10vw"
               className={`CubePortfolio`}
               moveElement={0}
             />
+            {/* </motion.div> */}
           </div>
         </div>
         {/* Content Section */}

@@ -3,6 +3,8 @@ import SplitScreen from "../general/SplitScreen";
 import arrow from "../../Assets/arrow.svg";
 import "./Services.css";
 import styled from "styled-components";
+import Vector1 from "../../Assets/Services1Vector.svg";
+import Vector2 from "../../Assets/Services2Vector.svg";
 
 const Heading = styled.h2`
   font-size: 7.407vw;
@@ -13,19 +15,31 @@ const Heading = styled.h2`
   -webkit-text-fill-color: transparent;
 `;
 
-export default function ServicesInfo({ service }) {
+export default function ServicesInfo({ service, CubeComponent }) {
   return (
     <div
       id={service.index === "01" && "services"}
       className="ServicesInfo col justify-content-center"
     >
-      <>
+      <div className="d-flex" style={{ width: "80vw" }}>
         {service.index === "01" && (
-          <div className="w-100">
+          <div className="d-flex">
             <Heading>Services</Heading>
+            <img
+              src={Vector1}
+              alt="Services Dashed Lines"
+              style={{ width: "45vw" }}
+            />
           </div>
         )}
-      </>
+        <div className="w-100 d-flex flex-row-reverse">
+          <CubeComponent
+            Width="10vw"
+            className={`CubeServices`}
+            moveElement={1}
+          />
+        </div>
+      </div>
       <SplitScreen firstWidth={1} secondWidth={3}>
         <div className="position-relative" style={{ height: "fit-content" }}>
           <div className="NumberSquare position-absolute"></div>
@@ -45,3 +59,28 @@ export default function ServicesInfo({ service }) {
     </div>
   );
 }
+
+// <div className="d-flex " style={{ width: "80vw" }}>
+//   {service.index === "01" ? (
+//     <div className="d-flex">
+//       <Heading>Services</Heading>
+//       <img
+//         src={Vector1}
+//         alt="Services Dashed Lines"
+//         style={{ width: "45vw" }}
+//       />
+//     </div>
+//   ) : (
+//     <div className="Services2Header position-fixed">
+//       <img
+//         src={Vector2}
+//         alt="Services Dashed Lines"
+//         style={{ height: "15vh" }}
+//         t
+//       />
+//     </div>
+//   )}
+//   <div className="w-100 d-flex flex-row-reverse">
+//     <CubeComponent Width="10vw" className={`CubeServices`} moveElement={1} />
+//   </div>
+// </div>;

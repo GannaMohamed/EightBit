@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import { motion } from "motion/react";
 
 const Title = styled.h3`
   font-weight: var(--bold);
@@ -30,6 +31,8 @@ const BoxContent = styled.p`
 `;
 
 export default function About2({ CubeComponent }) {
+  const ref = useRef(null);
+
   return (
     <div className="About2Page centered col">
       <Title>Why Choose Us</Title>
@@ -57,11 +60,18 @@ export default function About2({ CubeComponent }) {
         </Box>
       </div>
       <div className="About2CubeContainer w-100">
+        {/* <motion.div
+          ref={ref}
+          initial={{ y: -500 }}
+          whileInView={{ opacity: 10, y: 0 }}
+          transition={{ duration: 0.7 }}
+        > */}
         <CubeComponent
           Width="7vw"
           className={`CubeAbout2 float-right`}
           moveElement={0}
         />
+        {/* </motion.div> */}
       </div>
     </div>
   );
