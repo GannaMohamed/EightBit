@@ -6,7 +6,15 @@
 - Fullscreen scroll is disabled in mobile (to prevent navigation issues)
 - For responsive font-sizes stick to the default ones in fonts.css
 
-  ### Cube Settings
+### Cube Properties
+`<Cube property={value} />`
+- Width: "Usually in vw for responsive reasons" (DO NOT Use width css property)
+- move: Boolean, Opens the cube (moves all small cubes outwards)
+- moveElement: Int from 0-5 (moves a specific cube outwards)
+- hoverOneElement: Boolean (moves any small cube ON MOUSE HOVER)
+
+## Cube Classes
+- noShadow: removes the blue shadow
 
 ### Files Strcuture (from src)
 - Assets (images & fonts)
