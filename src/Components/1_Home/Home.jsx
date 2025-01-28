@@ -16,6 +16,22 @@ export default function Home({ className, CubeComponent }) {
 
   const [move, setMove] = useState(false);
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth <= 768 && window.scrollY > 1) {
+        setMove(true);
+      } else {
+        setMove(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
     // document.addEventListener("DOMContentLoaded", () => {
     //   const elements = document.querySelectorAll(".hidden");
     //   console.log(elements + "efed;m");
@@ -34,11 +50,12 @@ export default function Home({ className, CubeComponent }) {
     //   startEvent: "DOMContentLoaded",
     // });
   }, []);
+
   const handleMouseEnter = () => {
-    setMove(true);
+    if (window.innerWidth > 768) setMove(true);
   };
   const handleMouseLeave = () => {
-    setMove(false);
+    if (window.innerWidth > 768) setMove(false);
   };
 
   return (
@@ -59,10 +76,11 @@ export default function Home({ className, CubeComponent }) {
       <motion.div
         ref={ref}
         initial={{ opacity: 0, zoom: 0 }}
-        whileInView={{ opacity: 10, zoom: 1 }}
-        // animate={{
-        //   rotate: [12, 0, -12, 0, 12, 0, -12, 0, 12, 0, -12, 0],
-        // }}
+        // whileInView={{ opacity: 10, zoom: 1 }}
+        animate={{
+          opacity: 10,
+          zoom: 1,
+        }}
         transition={{ duration: 0.5 }}
       >
         <CubeComponent

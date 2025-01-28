@@ -536,7 +536,7 @@ export default function Cube({
   children,
   shadow,
   props,
-  animation,
+  // animation,
   move,
   moveElement,
   handleMouseEnter,

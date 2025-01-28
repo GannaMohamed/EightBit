@@ -5,7 +5,7 @@ export default function HomeContent({ show = "false" }) {
   return (
     <>
       <div
-        className={`HomeContent position-absolute centered w-100 
+        className={`HomeContent noMob position-absolute centered w-100 
        ${show ? "show" : ""}`}
       >
         <Box position="left">

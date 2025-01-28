@@ -1,26 +1,37 @@
-/* LAYOUT */
-:root {
+/* WEB LAYOUT */
+@media (min-width: 768px) {
+  :root {
     --ControlledFlowHeight: 90vh;
+  }
+  .ControlledFlow {
+      position: fixed;
+      top: 10vh;
+      height: var(--ControlledFlowHeight);
+  }
+  .Page.fade-up {
+    opacity: 0;
+  }
+  /* SCROLL EFFECT */
+  .ControlledFlow {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 5vh;
+  }
+  .ControlledFlow::-webkit-scrollbar {
+    display: none;
+  }
+}
 
+/* MOB LAYOUT */
+@media (max-width: 768px) {
+  :root {
+      --ControlledFlowHeight: 100vh;
+  }
 }
-.ControlledFlow {
-    position: fixed;
-    top: 10vh;
-    height: var(--ControlledFlowHeight);
-}
+
 .Page {
     height: var(--ControlledFlowHeight);
     padding: 0vw 3vw;
-}
-
-/* SCROLL EFFECT */
-.ControlledFlow {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 5vh;
-}
-.ControlledFlow::-webkit-scrollbar {
-  display: none;
 }
 .Page {
   transition: transform ease-in 700ms;
@@ -28,11 +39,8 @@
   transform: translateY(0);
   transition: opacity 0.4s ease-in-out;
   scroll-snap-align: start; 
+}
 
-}
-.Page.fade-up {
-  opacity: 0;
-}
 
 /* OTHER STYLING */
 .ControlledFlow {
@@ -59,7 +67,7 @@
 }
 
 @media (max-width: 768px) {
-  .DashVector {
+  .noMob, .DashVector {
     display: none;
   }
 }

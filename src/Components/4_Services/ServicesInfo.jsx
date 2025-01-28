@@ -28,14 +28,14 @@ export default function ServicesInfo({ service, CubeComponent }) {
             <img
               src={Vector1}
               alt="Services Dashed Lines"
-              style={{ width: "45vw" }}
+              style={{ width: "40vw" }}
             />
           </div>
         )}
         <div className="w-100 d-flex flex-row-reverse">
           <CubeComponent
             Width="10vw"
-            className={`CubeServices`}
+            className={`CubeServices ${service.index !== "01" ? "noMob" : ""}`}
             moveElement={1}
           />
         </div>

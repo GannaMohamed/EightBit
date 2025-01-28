@@ -47,7 +47,7 @@ export default function Contact({ CubeComponent }) {
         </div>
         <div className="FormContainer col">
           <form>
-            <h4 className="FormHeading">Get In Touch</h4>
+            <h4 className="FormHeading noMob">Get In Touch</h4>
             <Form onSubmit={onSubmit} />
           </form>
         </div>

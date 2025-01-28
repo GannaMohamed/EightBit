@@ -116,7 +116,12 @@
 }
 
 @media (max-width: 768px) {
-  .AboutBoxesContainer {display: flex; 
+  .CubeAbout {
+    position: relative !important;
+    align-self: flex-end;
+  }
+  .AboutBoxesContainer {
+    display: flex; 
     flex-direction: column;
   }
   
