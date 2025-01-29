@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 // import PortfolioContent from "./PortfolioContent";
 
 import styled from "styled-components";
@@ -11,6 +11,9 @@ import { motion } from "motion/react";
 import { ArrayResourceLoader } from "../../Models/ArrayResourceLoader";
 // import HorizontalScroll from "../general/HorizontalScroll";
 import { TestTemplate } from "../../Test";
+import { ResourceLoader } from "../../Models/ResourceLoader";
+import PortfolioContent from "./PortfolioContent";
+import AOS from "aos";
 
 const Title = styled.h2`
   ${"" /* font-size: 6vw; */}
@@ -31,6 +34,11 @@ export default function Portfolio({ className, type, CubeComponent }) {
   const handleWheelScroll = (e) => {
     e.currentTarget.scrollLeft += e.deltaY; // Use vertical scroll input to scroll horizontally
   };
+
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div className={`PortfolioPage col ${className}`}>
       <div className={`PortfolioPageContainer col`}>
@@ -61,14 +69,26 @@ export default function Portfolio({ className, type, CubeComponent }) {
         </div>
         {/* Content Section */}
         {/* <HorizontalScroll> */}
-        <ArrayResourceLoader
+        {/* <ArrayResourceLoader
           resourceUrl={"/project"}
           resourceName={"project"}
           ItemComponent={TestTemplate}
           className="horizontal-scroll-wrapper d-flex  flex-nowrap"
           style={{ gap: "20px" }}
           onWheel={handleWheelScroll}
-        ></ArrayResourceLoader>
+        ></ArrayResourceLoader> */}
+        <ResourceLoader
+          resourceUrl={"/project/1dd8e6bc-116d-4c7f-b227-acfb1b90bd85"}
+          resourceName={"project"}
+        >
+          <TestTemplate />
+        </ResourceLoader>
+        <ResourceLoader
+          resourceUrl={"/project/1dd8e6bc-116d-4c7f-b227-acfb1b90bd85"}
+          resourceName={"project"}
+        >
+          <TestTemplate />
+        </ResourceLoader>
         {/* </HorizontalScroll> */}
       </div>
     </div>
