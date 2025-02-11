@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SplitScreen from "../general/SplitScreen";
 import Select from "./Select";
 import { TextField, Box } from "@mui/material";
@@ -19,7 +19,9 @@ export default function Contact({ CubeComponent }) {
   // };
 
   const onSubmit = (formData) => {
+    alert("form ");
     const form = new FormData();
+
     // form append every value
     for (const key in formData) {
       form.append(key, formData[key]);
@@ -46,10 +48,10 @@ export default function Contact({ CubeComponent }) {
           </div>
         </div>
         <div className="FormContainer col">
-          <form>
-            <h4 className="FormHeading noMob">Get In Touch</h4>
-            <Form onSubmit={onSubmit} />
-          </form>
+          {/* <form id="ClientForm"> */}
+          <h4 className="FormHeading noMob">Get In Touch</h4>
+          <Form onSubmit={onSubmit} />
+          {/* </form> */}
         </div>
       </SplitScreen>
     </div>
@@ -62,6 +64,7 @@ export const Form = includeValidForm(
     onChangeData,
     selectedOptions,
     handleOptionClick,
+    handleElseChange,
     onSubmit,
     errors,
     isValid,
@@ -69,30 +72,25 @@ export const Form = includeValidForm(
     const {
       name,
       email,
-      timeline,
-      estimatedBudget,
-      projectServices,
-      projectInfo,
+      // , timeline, estimatedBudget, type, projectInfo
     } = formData || {};
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleSubmit = (e) => {
-      e.preventDefault();
-      setIsSubmitted(true); // Mark the form as submitted
-      onSubmit(formData); // Call parent submit handler
+      onSubmit(formData || {});
+      setIsSubmitted(true);
+      console.log(selectedOptions);
     };
 
     return formData ? (
       <>
-        <form onSubmit={handleSubmit}>
+        <form id="ClientForm" onSubmit={handleSubmit}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-              {/* Project Services */}
+              {/* Type */}
               <Grid item size={12}>
-                <label htmlFor="projectServices">
-                  What Are You Looking For?
-                </label>
+                <label htmlFor="type">What Are You Looking For?</label>
                 <Select
                   options={[
                     { value: "Branding", label: "Branding" },
@@ -102,10 +100,10 @@ export const Form = includeValidForm(
                   ]}
                   selectedOptions={selectedOptions}
                   handleOptionClick={handleOptionClick}
+                  handleElseChange={handleElseChange}
+                  elseValue={formData.elseType || ""}
                 />
-                {errors.projectServices && (
-                  <p className="error">{errors.projectServices}</p>
-                )}
+                {errors.type && <p className="error">{errors.type}</p>}
               </Grid>
 
               {/* Name field */}
@@ -135,7 +133,7 @@ export const Form = includeValidForm(
               </Grid>
 
               {/* Estimated Time field */}
-              <Grid item size={{ xs: 6, md: 6 }}>
+              {/* <Grid item size={{ xs: 6, md: 6 }}>
                 <label htmlFor="EstimatedTimeInput">
                   What’s Your Timeline?
                 </label>
@@ -147,10 +145,10 @@ export const Form = includeValidForm(
                   error={Boolean(errors.timeline)}
                   helperText={errors.timeline}
                 />
-              </Grid>
+              </Grid> */}
 
               {/* Budget field */}
-              <Grid item size={{ xs: 6, md: 6 }}>
+              {/* <Grid item size={{ xs: 6, md: 6 }}>
                 <label htmlFor="BudgetInput">What’s Your Budget?</label>
                 <TextField
                   fullWidth
@@ -162,10 +160,10 @@ export const Form = includeValidForm(
                   error={Boolean(errors.estimatedBudget)}
                   helperText={errors.estimatedBudget}
                 />
-              </Grid>
+              </Grid> */}
 
               {/* More About the Project field */}
-              <Grid item size={12}>
+              {/* <Grid item size={12}>
                 <label htmlFor="ProjectInfoInput">
                   Tell Us About Your Project.
                 </label>
@@ -181,7 +179,7 @@ export const Form = includeValidForm(
                   error={Boolean(errors.projectInfo)}
                   helperText={errors.projectInfo}
                 />
-              </Grid>
+              </Grid> */}
             </Grid>
           </Box>
 
@@ -190,6 +188,7 @@ export const Form = includeValidForm(
               className={`Submit Button my-3 ${isSubmitted ? "Submitted" : ""}`}
               type="submit"
               disabled={!isValid}
+              onClick={() => document.getElementById("ClientForm").submit()}
             >
               Submit
             </button>

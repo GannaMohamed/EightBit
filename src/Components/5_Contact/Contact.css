@@ -86,6 +86,21 @@ select:-webkit-autofill {
     -webkit-text-fill-color: transparent;
 }
 
+.Submit {
+      transition: background-color 0.3s ease-in-out; /* Prevent autofill flash */
+}
+
+.Submit:enabled:hover {
+    background: var(--selected-color);
+  color: white; /* Correct text color for selected badge */
+  border-color: var(--selected-color);
+
+  /* Remove transparent text effect when selected */  
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
 .Submitted {
     background: var(--selected-color);
     color: white;

@@ -7,7 +7,7 @@ export const includeValidForm = (Component) => {
       email: "",
       timeline: "",
       estimatedBudget: 0,
-      projectServices: [], // Sync with selected options
+      type: [], // Sync with selected options
       projectInfo: "",
     };
 
@@ -32,26 +32,26 @@ export const includeValidForm = (Component) => {
             errorMessage = "Invalid email format.";
           }
           break;
-        case "timeline":
-          if (!value) {
-            errorMessage = "Timeline is required.";
-          }
-          break;
-        case "estimatedBudget":
-          if (!value || isNaN(value)) {
-            errorMessage = "Estimated budget should be a valid number.";
-          }
-          break;
-        case "projectServices":
+        // case "timeline":
+        //   if (!value) {
+        //     errorMessage = "Timeline is required.";
+        //   }
+        //   break;
+        // case "estimatedBudget":
+        //   if (!value || isNaN(value)) {
+        //     errorMessage = "Estimated budget should be a valid number.";
+        //   }
+        //   break;
+        case "type":
           if (value.length === 0) {
             errorMessage = "Please select at least one service.";
           }
           break;
-        case "projectInfo":
-          if (!value || value.length < 20) {
-            errorMessage = "Project info must be at least 20 characters.";
-          }
-          break;
+        // case "projectInfo":
+        //   if (!value || value.length < 20) {
+        //     errorMessage = "Project info must be at least 20 characters.";
+        //   }
+        //   break;
         default:
           break;
       }
@@ -80,16 +80,37 @@ export const includeValidForm = (Component) => {
       setErrors({});
     };
 
-    // Sync selectedOptions with formData.projectServices
+    // Sync selectedOptions with formData.type
     const handleOptionClick = (value) => {
       let updatedOptions;
-      if (selectedOptions.includes(value)) {
-        updatedOptions = selectedOptions.filter((option) => option !== value);
+      if (value === "Else") {
+        if (selectedOptions.includes("Else")) {
+          updatedOptions = selectedOptions.filter(
+            (option) => option !== "Else"
+          );
+          onChangeData({ elseType: "" }); // Clear the input field when "Else" is removed
+        } else {
+          updatedOptions = [...selectedOptions, "Else"];
+        }
       } else {
-        updatedOptions = [...selectedOptions, value];
+        if (selectedOptions.includes(value)) {
+          updatedOptions = selectedOptions.filter((option) => option !== value);
+        } else {
+          updatedOptions = [...selectedOptions, value];
+        }
       }
       setSelectedOptions(updatedOptions);
-      onChangeData({ projectServices: updatedOptions }); // Sync with formData
+      onChangeData({ type: updatedOptions }); // Sync with formData
+    };
+
+    const handleElseChange = (e) => {
+      const elseValue = e.target.value;
+      const updatedOptions = selectedOptions.map((option) =>
+        option === "Else" ? elseValue : option
+      );
+
+      setSelectedOptions(updatedOptions);
+      onChangeData({ type: updatedOptions, elseType: elseValue });
     };
 
     return (
@@ -100,6 +121,7 @@ export const includeValidForm = (Component) => {
         onResetForm={onResetForm}
         selectedOptions={selectedOptions}
         handleOptionClick={handleOptionClick}
+        handleElseChange={handleElseChange}
         errors={errors}
         isValid={isValid}
       />
