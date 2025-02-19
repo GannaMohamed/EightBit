@@ -148,13 +148,174 @@
   color: var(--oxfordBlue);
   background-color: transparent;
   border: 1px solid var(--oxfordBlue);
-  border-radius: 50px; /* Rounded corners */
+  border-radius: 10vw !important;
   text-transform: capitalize; /* Capitalize first letter */
   cursor: default; /* Optional: Avoid pointer cursor */
   transition: all 0.3s ease;
 }
-
+.whiteBadge {
+    filter: brightness(0) invert(1);
+}
+/* 
 .badge:hover {
   background-color: var(--oxfordBlue);
-  color: #fff; /* Contrast color for text */
+  color: #fff; 
+} */
+
+
+
+/* FULL PORTFOLIO PAGE */
+.PortfoliosContainer {
+    /* gap: 1.5rem;
+    flex-wrap: wrap; */
+      display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Equal-width columns */
+  grid-auto-rows: minmax(100px, auto); /* Row height adjusts to content */
+  gap: 1.5rem; /* Space between items */
+  align-items: start; /* Align items to the top */
+}
+.PortfolioUnit {    
+    flex: 1 0 0;
+    gap: 5rem;
+    border-radius: 25px;
+    background: linear-gradient(
+        120deg,
+        rgba(1, 64, 160, 0.8) 31.58%,
+        rgba(0, 23, 58, 0.8) 121.41%
+    );
+    color: var(--lavenderBlue);
+    min-width: 400px;
+    /* min-height: 200px; */
+    height: fit-content;
+    transition: min-height 0.3s ease-in-out;
+}
+.PortfolioUnit:hover {
+    /* min-height: 350px; */
+    background: linear-gradient(200deg, #0140A0 13.16%, #00173A 98.72%);
+}
+.PortfolioUnit:hover .ProjectDescription {
+    font-size: 90%;
+        transition: font-size ease-in 0.3s;
+}
+.showOnHover {
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+}
+.PortfolioUnit:hover .showOnHover {
+    opacity: 1;
+}
+.BackArrow {
+    transform: rotate(180deg);
+    width: 30px;
+    cursor: pointer;
+}
+.ToLiveProject::before {
+  background-color: var(--brightBlue);
+  content: "";
+  position: absolute;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  z-index: 0;
+}
+.ToLiveProject {
+    border-radius: 10px;
+    border: 3px solid var(--brightBlue);
+    color: var(--lavenderBlue);
+    text-decoration: none;  
+    overflow: hidden;
+    position: relative;
+    &:hover {
+        text-decoration: none !important;
+        color: unset;
+    }
+}
+.ToLiveProject:hover::before {
+   right: 0;
+}
+.MoreDetails:hover {
+    color: var(--brightBlue);
+    transition: color ease 0.3s;
+}
+@media (min-width: 1350px) {
+    .PortfolioUnit {
+        max-width: 450px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .PortfolioUnit {
+        flex-grow: 1;
+        aspect-ratio: 1.618;
+    }
+    .BackArrow {
+        width: 20px;
+    }
+}
+
+
+/* PORTFOLIO MODAL */
+.Modal {
+  .project-name {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);  
+    font-weight: bold;
+    margin: unset;
+  }
+  .badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--oxfordBlueLight);
+    color: white;
+    border-radius: 10px;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+  }
+  .description {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  .featuresContainer {
+    margin-top: 10px;
+  }
+  .keyFeature {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  .completion-date {
+    font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+    font-weight: bold;
+    color: var(--oxfordBlue);
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+  }
+  .template {
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .Modal {
+    .modal-content {
+      padding: 16px;
+    }
+    .modal-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .badge-container {
+      justify-content: flex-start;
+    }
+    .featuresContainer ul {
+      padding-left: 18px;
+    }
+  }
 }

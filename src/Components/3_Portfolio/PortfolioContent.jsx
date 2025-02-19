@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MobTemplate from "./MobTemplate";
 import WebTemplate from "./WebTemplate";
 import { webexample, mobexample } from "../../Utils/assets";
+import { NavLink } from "react-router-dom";
 
 const ContentTitle = styled.h5`
   ${"" /* font-size: 2.7vw; */}
@@ -47,42 +48,44 @@ export default function PortfolioContent({ project, displayedType }) {
     projectMedia,
   } = project || {};
 
-  const shouldDisplayProject = displayedType === platform;
+  // const shouldDisplayProject = displayedType === platform;
 
   return (
-    shouldDisplayProject && (
-      <div className="PortfolioContentContainer">
-        <Content className="PortfolioContent">
-          <ContentTitle className="bold">{name}</ContentTitle>
-          <div className="badge-container">
-            {/* {technologies.map((tech, index) => ( */}
-            <span className="badge">{technologies}</span>
-            {/* ))} */}
-          </div>
-          <ContentP className="ContentP medium">{desription}</ContentP>
-          <div>
+    // shouldDisplayProject &&
+    <div className="PortfolioContentContainer">
+      <Content className="PortfolioContent">
+        <ContentTitle className="bold">{name}</ContentTitle>
+        <div className="badge-container">
+          {technologies?.split(",").map((badge) => (
+            <span className="badge">{badge}</span>
+          ))}
+          {/* ))} */}
+        </div>
+        <ContentP className="ContentP medium">{desription}</ContentP>
+        <div>
+          <NavLink to="/portfolio">
             <button className="SeeMore semibold">
               <h6 className="SeeMoreH6">See More</h6>
             </button>
-          </div>
-        </Content>
-        <div className="d-flex centered">
-          {platform === "web" && (
-            <WebTemplate
-              img={webexample}
-              projectMedia={projectMedia}
-              className="WebTemplate"
-            />
-          )}
-          {platform === "mobile" && (
-            <MobTemplate
-              img={mobexample}
-              projectMedia={projectMedia}
-              className="MobileContainer"
-            />
-          )}
+          </NavLink>
         </div>
+      </Content>
+      <div className="d-flex centered">
+        {platform === "web" && (
+          <WebTemplate
+            img={webexample}
+            projectMedia={projectMedia}
+            className="WebTemplate"
+          />
+        )}
+        {platform === "mobile" && (
+          <MobTemplate
+            img={mobexample}
+            projectMedia={projectMedia}
+            className="MobileContainer"
+          />
+        )}
       </div>
-    )
+    </div>
   );
 }

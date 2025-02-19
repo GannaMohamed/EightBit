@@ -5,6 +5,7 @@ import MobTemplate from "./Components/3_Portfolio/MobTemplate";
 import WebTemplate from "./Components/3_Portfolio/WebTemplate";
 import { webexample, mobexample } from "./Utils/assets";
 import { ArrayResourceLoader } from "./Models/ArrayResourceLoader";
+import { NavLink } from "react-router-dom";
 
 export default function Test() {
   const handleWheelScroll = (e) => {
@@ -40,7 +41,9 @@ export function TestTemplate({ project, displayedType }) {
         <div className="col centered">
           <h5>{name}</h5>
           <div>{desription}</div>
-          <button>See More Projects</button>
+          <NavLink to="/portfolio" className="Button">
+            See More Projects
+          </NavLink>
         </div>
 
         {platform === "web" && (

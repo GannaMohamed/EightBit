@@ -23,7 +23,12 @@ export default function AppContainer() {
       <Portfolio
         CubeComponent={(props) => <Cube {...props} />}
         id="portfolio"
-        // type={"web"}
+        projectId="9c760684-b79d-493e-97ce-69e5e92117f9"
+      />
+      <Portfolio
+        CubeComponent={(props) => <Cube {...props} />}
+        id="portfolioMob"
+        projectId="1dd8e6bc-116d-4c7f-b227-acfb1b90bd85"
       />
       {/* <Portfolio
         CubeComponent={(props) => <Cube {...props} />}

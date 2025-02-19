@@ -9,6 +9,7 @@ import AppContainer from "./AppContainer";
 import Test from "./Test";
 import Navbar from "./Components/Navbar/Navbar";
 import { ResourceLoader } from "./Models/ResourceLoader";
+import FullPortfolio from "./Components/3_Portfolio/FullPortfolio";
 
 // import { GetAllProjects } from "./Models/ProjectModel";
 
@@ -51,6 +52,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<AppContainer title="8 Bit" />} />
+          <Route path="/portfolio" element={<FullPortfolio />} />
           <Route path="/test" element={<Test />} />
           {/* <Route path="*" element={<PageNotFound title="404" />} /> */}
         </Routes>

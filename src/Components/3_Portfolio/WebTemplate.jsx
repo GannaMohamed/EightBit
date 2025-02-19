@@ -64,7 +64,7 @@ const Platform = styled.img`
   z-index: -1;
 `;
 
-export default function WebTemplate({ img, className}) {
+export default function WebTemplate({ img, className }) {
   return (
     <Container className={`${className}`}>
       <LaptopContainer className="LaptopContainer position-relative">

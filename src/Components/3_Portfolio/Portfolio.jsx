@@ -28,7 +28,12 @@ const Title = styled.h2`
   -webkit-text-fill-color: transparent;
 `;
 
-export default function Portfolio({ className, type, CubeComponent }) {
+export default function Portfolio({
+  className,
+  projectId,
+  type,
+  CubeComponent,
+}) {
   const ref = useRef(null);
 
   const handleWheelScroll = (e) => {
@@ -78,17 +83,17 @@ export default function Portfolio({ className, type, CubeComponent }) {
           onWheel={handleWheelScroll}
         ></ArrayResourceLoader> */}
         <ResourceLoader
+          resourceUrl={`/project/${projectId}`}
+          resourceName={"project"}
+        >
+          <PortfolioContent />
+        </ResourceLoader>
+        {/* <ResourceLoader
           resourceUrl={"/project/1dd8e6bc-116d-4c7f-b227-acfb1b90bd85"}
           resourceName={"project"}
         >
           <TestTemplate />
-        </ResourceLoader>
-        <ResourceLoader
-          resourceUrl={"/project/1dd8e6bc-116d-4c7f-b227-acfb1b90bd85"}
-          resourceName={"project"}
-        >
-          <TestTemplate />
-        </ResourceLoader>
+        </ResourceLoader> */}
         {/* </HorizontalScroll> */}
       </div>
     </div>
