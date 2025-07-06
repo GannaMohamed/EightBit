@@ -69,7 +69,7 @@ export default function Footer() {
               className="CopyRightsContainer d-flex justify-content-between py-2"
             >
               <p className="CopyRights text-uppercase">
-                © 2024 8-Bit Solutions. All Rights Reserved.
+                © 2025 8-Bit Solutions. All Rights Reserved.
               </p>
               <Media WhiteMedia={true} />
             </Grid>
